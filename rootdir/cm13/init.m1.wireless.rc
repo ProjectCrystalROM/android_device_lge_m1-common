@@ -9,10 +9,15 @@ service wcnss-service /system/bin/wcnss_service
     disabled
     oneshot
 
-# Keep WCNSS isolated from normal boot. Opening the misc device first restores
-# the stock ordering needed for the SMD control driver to bind before the
-# userspace calibration service starts. The property is nonpersistent, so a
-# failed experiment cannot boot-loop the phone.
+# Open the misc device during normal boot, matching the stock K7 ordering so
+# the SMD control driver binds and finishes NV download before either WLAN or
+# Bluetooth tries to use the shared WCNSS remote.  This exact sequence has
+# completed on hardware without the earlier firmware-watchdog reset.
+on boot
+    write /dev/wcnss_wlan ""
+    start wcnss-service
+
+# Retain a nonpersistent diagnostic retrigger for read-only bring-up sessions.
 on property:sys.k7.wcnss.start=1
     write /dev/wcnss_wlan ""
     start wcnss-service
