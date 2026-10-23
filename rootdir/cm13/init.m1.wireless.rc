@@ -9,13 +9,35 @@ service wcnss-service /system/bin/wcnss_service
     disabled
     oneshot
 
-# Keep WCNSS isolated from normal boot until its firmware path has survived a
-# device test.  This nonpersistent property permits one explicit diagnostic
-# start and resets on reboot, preventing a firmware watchdog from boot-looping
-# the phone again.
+# Keep WCNSS isolated from normal boot. Opening the misc device first restores
+# the stock ordering needed for the SMD control driver to bind before the
+# userspace calibration service starts. The property is nonpersistent, so a
+# failed experiment cannot boot-loop the phone.
 on property:sys.k7.wcnss.start=1
+    write /dev/wcnss_wlan ""
     start wcnss-service
     setprop sys.k7.wcnss.start 0
+
+# Stock K7 Bluetooth initialization programs the controller address at boot,
+# then services the vendor library's hciattach request when Bluetooth is
+# enabled. Keep these focused definitions instead of importing legacy qcom rc.
+service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
+    class core
+    user root
+    oneshot
+
+service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
+    class late_start
+    user bluetooth
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+on property:bluetooth.hciattach=true
+    start hciattach
+
+on property:bluetooth.hciattach=false
+    setprop bluetooth.status off
 
 service p2p_supplicant /system/bin/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \

@@ -13,6 +13,7 @@ PRODUCT_PACKAGES += \
 # provisioning path is investigated separately.  The existing vendor rule
 # remains the sole owner of WCNSS_cfg.dat.
 PRODUCT_COPY_FILES += \
+    vendor/lge/m1/proprietary/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     device/lge/m1-common/configs/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/lge/m1-common/configs/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
     device/lge/m1-common/configs/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
