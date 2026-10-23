@@ -1,0 +1,2 @@
+# Verified on the stock-adjacent MS33010m phone.
+rild.libargs=-d /dev/smd0

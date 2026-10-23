@@ -1,0 +1,2 @@
+# Mountpoints present in the supplied m1 GPT/stock init; existing QCOM types.
+allow init { persist_drm_file sensors_persist_file }:dir mounton;

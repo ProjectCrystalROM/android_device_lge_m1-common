@@ -1,0 +1,9 @@
+*.sh text eol=lf
+*.mk text eol=lf
+*.cpp text eol=lf
+*.h text eol=lf
+proprietary-blobs.txt text eol=lf
+*.rc text eol=lf
+fstab.* text eol=lf
+*.te text eol=lf
+file_contexts text eol=lf

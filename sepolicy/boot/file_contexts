@@ -1,0 +1,5 @@
+# QCOM common policy already labels /persist and the QSEE/time executables.
+/persist-lg(/.*)?                 u:object_r:persist_drm_file:s0
+/sns(/.*)?                        u:object_r:sensors_persist_file:s0
+/mpt(/.*)?                        u:object_r:persist_file:s0
+/system/bin/thermal-engine        u:object_r:thermal-engine_exec:s0

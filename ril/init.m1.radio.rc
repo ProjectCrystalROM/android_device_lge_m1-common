@@ -1,0 +1,53 @@
+# Optional import from init.m1.rc; installed only by cm_m1_radio.
+# The CM core owns ril-daemon, rild/rild-debug sockets and /data/misc/radio.
+# The stock daemon ignores CM's extra SAP socket; no SAP function is fabricated.
+on init
+    export LD_SHIM_LIBS /system/lib/libril.so|libm1_ril_compat.so
+
+on post-fs-data
+    mkdir /dev/socket/qmux_radio 0770 radio radio
+    chmod 2770 /dev/socket/qmux_radio
+    mkdir /dev/socket/qmux_audio 0770 media audio
+    chmod 2770 /dev/socket/qmux_audio
+    mkdir /dev/socket/qmux_bluetooth 0770 bluetooth bluetooth
+    chmod 2770 /dev/socket/qmux_bluetooth
+    mkdir /dev/socket/qmux_gps 0770 gps gps
+    chmod 2770 /dev/socket/qmux_gps
+
+# Stock m1 requests the modem image through the ADSP loader after /firmware
+# mounts. The MSM8909 audio codec also waits for the resulting APR modem state.
+on early-boot
+    write /sys/kernel/boot_adsp/boot 1
+
+# Stock m1 explicitly starts remote storage on boot, after firmware/persist mounts.
+on boot
+    start rmt_storage
+
+service rmt_storage /system/bin/rmt_storage
+    class core
+    user root
+    disabled
+
+# Stock RIL registers with Qualcomm's Binder peripheral manager before QMI init.
+service per_mgr /system/bin/pm-service
+    class core
+    user system
+    group system net_raw
+
+# Stock's IPC-router access configuration; do not substitute a generic config.
+service irsc_util /system/bin/irsc_util /system/etc/sec_config
+    class main
+    user root
+    oneshot
+
+service qmuxd /system/bin/qmuxd
+    class main
+    user root
+    group radio audio bluetooth gps qcom_diag
+
+service netmgrd /system/bin/netmgrd
+    class main
+    user root
+
+# radish is retained as an executable for netmgr's dynamic invocation, not a
+# standalone init service. Common QCOM policy supplies the service domains.

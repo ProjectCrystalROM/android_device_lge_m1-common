@@ -1,0 +1,31 @@
+# Mount paths/options derived from the supplied MS33010m boot ramdisk and GPT.
+# CM13 owns vold, encryption transitions, and emulated-storage services.
+on init
+    mkdir /firmware 0771 system system
+    mkdir /persist 0771 system system
+    mkdir /persist-lg 0771 system system
+    mkdir /sns 0771 system system
+    mkdir /mpt 0775 system system
+
+on fs
+    mount_all /fstab.m1
+    # Stock keeps auxiliary volumes outside mount_all: their failures must not
+    # suppress fs_mgr's data/encryption startup result. These waits are bounded.
+    wait /dev/block/bootdevice/by-name/persist 5
+    mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev noatime barrier=1,data=ordered,nodelalloc,errors=continue
+    wait /dev/block/bootdevice/by-name/drm 5
+    mount ext4 /dev/block/bootdevice/by-name/drm /persist-lg nosuid nodev noatime barrier=1,data=ordered,nodelalloc,errors=continue
+    wait /dev/block/bootdevice/by-name/sns 5
+    mount ext4 /dev/block/bootdevice/by-name/sns /sns nosuid nodev noatime barrier=1,data=ordered,nodelalloc,errors=continue
+    wait /dev/block/bootdevice/by-name/mpt 5
+    mount ext4 /dev/block/bootdevice/by-name/mpt /mpt nosuid nodev noatime barrier=1,noauto_da_alloc,errors=continue
+    wait /dev/block/bootdevice/by-name/modem 5
+    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro context=u:object_r:firmware_file:s0,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
+
+on post-fs
+    mkdir /persist/data 0700 system system
+    restorecon_recursive /persist
+
+on post-fs-data
+    mkdir /data/time 0700 system system
+    restorecon_recursive /data/time

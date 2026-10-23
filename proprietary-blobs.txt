@@ -1,3 +1,15 @@
+# Legacy STLport is required by supplied K7 blobs; neither CM13 candidate ships it.
+# Existing vendor bytes match MS33010m. See audit/ABI_CANDIDATE_FINDINGS.md.
+lib/libstlport.so
+
+# Stock MS33010m boot services and paired thermal configuration.
+# Source/hash records: audit/boot-blob-provenance.json in the workspace.
+bin/qseecomd
+bin/thermal-engine
+bin/time_daemon
+etc/thermal-engine-8909.conf
+etc/thermal-engine-default.conf
+
 # Audio
 etc/acdbdata/MTP/Bluetooth_cal.acdb
 etc/acdbdata/MTP/General_cal.acdb
@@ -9,11 +21,11 @@ etc/acdbdata/MTP/Speaker_cal.acdb
 etc/acdbdata/MTP/workspaceFile.qwsp
 
 #Keymaster for m1
-firmware/image/keymaster.b00
-firmware/image/keymaster.b01
-firmware/image/keymaster.b02
-firmware/image/keymaster.b03
-firmware/image/keymaster.mdt
+firmware/image/keymaste.b00
+firmware/image/keymaste.b01
+firmware/image/keymaste.b02
+firmware/image/keymaste.b03
+firmware/image/keymaste.mdt
 
 #Other Stuff
 bin/netmgrd
@@ -45,11 +57,11 @@ etc/acdbdata/MTP/Hdmi_cal.acdb
 etc/acdbdata/MTP/Headset_cal.acdb 
 etc/acdbdata/MTP/Speaker_cal.acdb 
 etc/acdbdata/MTP/workspaceFile.qwsp 
-firmware/image/keymaster.b00 
-firmware/image/keymaster.b01 
-firmware/image/keymaster.b02 
-firmware/image/keymaster.b03 
-firmware/image/keymaster.mdt 
+firmware/image/keymaste.b00
+firmware/image/keymaste.b01
+firmware/image/keymaste.b02
+firmware/image/keymaste.b03
+firmware/image/keymaste.mdt
 bin/netmgrd 
 bin/qmuxd 
 bin/radish 
@@ -89,11 +101,10 @@ bin/mm-qcamera-app
 bin/mm-qcamera-daemon 
 lib/liballegro.so 
 lib/libandroid.so 
-lib/libandroidfw.so 
-lib/libandroid_runtime.so 
+# libandroidfw.so and libandroid_runtime.so must come from CM13 platform sources.
 lib/libemoji.so 
 lib/libandroid_servers.so 
-lib/libart.so 
+# libart.so must come from CM13 ART sources, not a stock Lollipop override.
 lib/liblgalmond.so 
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/libadreno_utils.so 
@@ -184,7 +195,7 @@ vendor/lib/libstaapi.so
 vendor/lib/libthermalclient.so 
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so 
 vendor/lib/libwfdcommonutils.so 
-lib/libmmipl.so 
+vendor/lib/libmmipl.so:lib/libmmipl.so
 vendor/lib/libjpegdhw.so 
 vendor/lib/libmmcamera2_pproc_modules.so 
 vendor/lib/libmmcamera2_c2d_module.so 
@@ -211,7 +222,7 @@ lib/libqdMetaData.so
 lib/libc2dcolorconvert.so 
 lib/libOmxVenc.so 
 vendor/lib/libOmxQcelp13Dec.so 
-lib/libOmxAacDec.so
+vendor/lib/libOmxAacDec.so
 lib/libOmxAacEnc.so 
 lib/libOmxQcelp13Enc.so 
 lib/libOmxEvrcEnc.so 
@@ -220,18 +231,17 @@ vendor/lib/libqmi_client_helper.so
 vendor/lib/libquipc_os_api.so 
 vendor/lib/libRSDriver_adreno.so 
 vendor/lib/librs_adreno.so 
-lib/libbccQTI.so 
+vendor/lib/libbccQTI.so
 vendor/lib/libOmxIttiamVdec.so 
 vendor/lib/libscve_mv.so 
 vendor/lib/libwvdrm_L3.so
 vendor/lib/libwqe.so 
-lib/libxml2.so 
 vendor/lib/libssd.so 
 vendor/lib/libscve.so 
 vendor/lib/libsta_lib_third_party_staproxy_sta_proxy_loader_gyp.so 
 vendor/lib/libimscamera_jni.so 
 vendor/lib/liblowi_client.so 
-lib/libdpmtcm.so 
+vendor/lib/libdpmtcm.so
 vendor/lib/libdpmframework.so 
 vendor/lib/libcneconn.so 
 vendor/lib/libdpmfdmgr.so 
@@ -334,7 +344,8 @@ lib/libvss_ims_qcci.so
 lib/libQWiFiSoftApCfg.so 
 lib/libvss_gnss_qcci.so 
 lib/libvss_dmi_qcci.so 
-lib/libmpt_ex.so
+# libmpt_ex.so omitted: absent from MS33010m stock and the shipped vendor copy rules;
+# no ELF selected by those rules imports it. See audit/SYSTEM_IMAGE_FINDINGS.md.
 lib/libmemalloc.so 
 lib/libqdutils.so 
 lib/libvss_nv_core.so 
@@ -372,7 +383,6 @@ lib/libcurl.so
 lib/liblgRmsVolComp.so 
 lib/liblgeaacmain.so 
 lib/libstagefright_soft_pcmdec.so 
-lib/liblgcamera_jni.so 
 lib/libecryptfs_key_mod_passphrase.so 
 lib/libecryptfs.so 
 lib/libgcrypt.so 
@@ -477,5 +487,4 @@ lib/libimsrcsmedia.so
 lib/liblginvertcolor_jni.so 
 lib/libril.so 
 vendor/lib/libRSDriver_adreno.so 
-lib/libcamera_client.so 
 

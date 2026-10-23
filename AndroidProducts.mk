@@ -14,5 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/m1.mk \
+# m1.mk is an inheritance fragment. The cm_m1 product is registered by
+# device/lge/m1/AndroidProducts.mk.
+PRODUCT_MAKEFILES :=

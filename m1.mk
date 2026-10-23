@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, vendor/lge/m1/m1-vendor.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += device/lge/m1-common/overlay
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 854
@@ -41,9 +41,7 @@ PRODUCT_PACKAGES += \
    init.qcom.bt.bluedroid.sh \
    init.qcom.bt.sh
 
-# lib
-PRODUCT_COPY_FILES += \
-    device/lge/m1-common/prebuilt/lib/libcamera_client.so:system/lib/libcamera_client.so
+# CM platform camera-client and XML providers are selected by boot.mk.
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -67,7 +65,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-    $(LOCAL_PATH)/dt.img:dt.img
+    device/lge/m1/dt.img:dt.img
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -84,10 +82,10 @@ PRODUCT_PACKAGES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
+    device/lge/m1-common/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    device/lge/m1-common/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    device/lge/m1-common/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    device/lge/m1-common/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # Camera
 # PRODUCT_PACKAGES += \
@@ -116,22 +114,22 @@ PRODUCT_PACKAGES += \
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    $(LOCAL_PATH)/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/keylayout/m1-keypad.kl:system/usr/keylayout/m1-keypad.kl \
-    $(LOCAL_PATH)/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/lge/m1-common/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/lge/m1-common/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
+    device/lge/m1-common/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/lge/m1-common/keylayout/m1-keypad.kl:system/usr/keylayout/m1-keypad.kl \
+    device/lge/m1-common/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
 
 # Input device config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/lge_touch.idc:system/usr/idc/lge_touch.idc \
-    $(LOCAL_PATH)/idc/pp2106-keypad.idc:system/usr/idc/pp2106-keypad.idc \
-    $(LOCAL_PATH)/idc/qwerty.idc:system/usr/idc/qwerty.idc \
-    $(LOCAL_PATH)/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
+    device/lge/m1-common/idc/lge_touch.idc:system/usr/idc/lge_touch.idc \
+    device/lge/m1-common/idc/pp2106-keypad.idc:system/usr/idc/pp2106-keypad.idc \
+    device/lge/m1-common/idc/qwerty.idc:system/usr/idc/qwerty.idc \
+    device/lge/m1-common/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
 
 # IPC router config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
+    device/lge/m1-common/configs/sec_config:system/etc/sec_config
 
 # Keystore
 PRODUCT_PACKAGES += \
@@ -143,15 +141,15 @@ PRODUCT_PACKAGES += \
 
 # Media config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    device/lge/m1-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/lge/m1-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
 # NFC
 #ifeq ($(TARGET_BUILD_VARIANT),user)
-#    NFCEE_ACCESS_PATH := $(LOCAL_PATH)/configs/nfcee_access.xml
+#    NFCEE_ACCESS_PATH := device/lge/m1-common/configs/nfcee_access.xml
 #endif
 
 #PRODUCT_COPY_FILES += \
@@ -186,7 +184,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
+    device/lge/m1-common/configs/thermal-engine.conf:system/etc/thermal-engine.conf
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -203,12 +201,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     kernel/lge/m1/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     kernel/lge/m1/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
-    device/lge/m1/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+    device/lge/m1-common/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # WPA Supplicant
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:/system/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:/system/etc/wifi/wpa_supplicant_overlay.conf
+    device/lge/m1-common/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    device/lge/m1-common/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
     hostapd \
