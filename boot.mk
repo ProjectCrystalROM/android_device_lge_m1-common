@@ -1,5 +1,6 @@
 # Normal-boot integration. See NORMAL_BOOT_INTEGRATION.md in the audit workspace.
 $(call inherit-product, device/lge/msm8909-common/boot.mk)
+$(call inherit-product, device/lge/m1-common/sensors.mk)
 
 # Platform providers are built by CM13. Do not overwrite them with Lollipop
 # libraries; see audit/PLATFORM_PROVIDER_INTEGRATION.md in the project workspace.

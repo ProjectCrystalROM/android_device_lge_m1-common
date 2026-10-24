@@ -1,3 +1,6 @@
+# Exact stock K7 motion-sensor HAL; live rotation validation in sensors.mk.
+lib/hw/sensors.msm8909.so
+
 # Legacy STLport is required by supplied K7 blobs; neither CM13 candidate ships it.
 # Existing vendor bytes match MS33010m. See audit/ABI_CANDIDATE_FINDINGS.md.
 lib/libstlport.so
