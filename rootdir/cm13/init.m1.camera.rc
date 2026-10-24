@@ -1,0 +1,18 @@
+# Required stock data paths, isolated from unrelated legacy services.
+on post-fs-data
+    mkdir /data/misc/camera 0770 camera camera
+    mkdir /data/camera 0770 media camera
+
+# Stock K7 class, identity and supplementary groups. late_start follows main
+# at the same init trigger, letting probing proceed during HAL discovery.
+service qcamerasvr /system/bin/mm-qcamera-daemon
+    class late_start
+    user camera
+    group camera system inet input graphics
+
+# Nonpersistent diagnostic control for startup-order troubleshooting.
+on property:sys.k7.camera.stop=1
+    stop qcamerasvr
+
+on property:sys.k7.camera.start=1
+    start qcamerasvr

@@ -1,10 +1,15 @@
 # Normal-boot integration. See NORMAL_BOOT_INTEGRATION.md in the audit workspace.
 $(call inherit-product, device/lge/msm8909-common/boot.mk)
 $(call inherit-product, device/lge/m1-common/sensors.mk)
+$(call inherit-product, device/lge/m1-common/heap.mk)
+$(call inherit-product, device/lge/m1-common/camera.mk)
 
 # Platform providers are built by CM13. Do not overwrite them with Lollipop
 # libraries; see audit/PLATFORM_PROVIDER_INTEGRATION.md in the project workspace.
 PRODUCT_PACKAGES += libcamera_client libxml2
+
+# Stock camera HAL only; the focused radio product skips m1-vendor.mk.
+PRODUCT_COPY_FILES += vendor/lge/m1/proprietary/lib/hw/camera.msm8909.so:system/lib/hw/camera.msm8909.so
 
 PRODUCT_COPY_FILES += \
     device/lge/m1-common/rootdir/cm13/init.m1.rc:root/init.m1.rc \

@@ -2,6 +2,7 @@
 import /init.m1.fs.rc
 import /init.m1.platform.rc
 import /init.m1.usb.rc
+import /init.m1.camera.rc
 
 # Missing optional import is accepted by CM13 init; only wireless-enabled
 # products install this focused fragment.

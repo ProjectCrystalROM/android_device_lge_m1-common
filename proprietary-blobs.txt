@@ -1,3 +1,6 @@
+# Exact MS33010m camera HAL; keep CM13 libcamera_client (boot.mk).
+lib/hw/camera.msm8909.so
+
 # Exact stock K7 motion-sensor HAL; live rotation validation in sensors.mk.
 lib/hw/sensors.msm8909.so
 
