@@ -1,0 +1,62 @@
+From f9fbab56cd4aad220c5b97b6f3bcff30b30d233d Mon Sep 17 00:00:00 2001
+From: Airi Kozume <airi@kozume.moe>
+Date: Sat, 24 Oct 2026 22:08:51 -0400
+Subject: [PATCH] Publish selected K7 Bluetooth address before stock helper
+ startup
+
+Change-Id: I1d7bec4f4e2b1c71721fc2760504c05cd69f82d0
+---
+ Android.mk           |  5 +++++
+ btif/src/btif_core.c | 20 ++++++++++++++++++++
+ 2 files changed, 25 insertions(+)
+
+diff --git a/Android.mk b/Android.mk
+index b398132..6ba43a1 100644
+--- a/Android.mk
++++ b/Android.mk
+@@ -40,6 +40,11 @@ bdroid_CFLAGS += \
+   -UNDEBUG \
+   -DLOG_NDEBUG=1
+ 
++# Stock K7 hci_qcomm_init consumes a property rather than the HAL address.
++ifeq ($(BOARD_BLUETOOTH_PUBLISH_LOCAL_ADDRESS),true)
++bdroid_CFLAGS += -DBT_PUBLISH_LOCAL_ADDRESS
++endif
++
+ include $(call all-subdir-makefiles)
+ 
+ # Cleanup our locals
+diff --git a/btif/src/btif_core.c b/btif/src/btif_core.c
+index ba717bb..a4447c5 100644
+--- a/btif/src/btif_core.c
++++ b/btif/src/btif_core.c
+@@ -546,6 +546,26 @@ bt_status_t btif_init_bluetooth() {
+   memset(&btif_local_bd_addr, 0, sizeof(bt_bdaddr_t));
+   btif_fetch_local_bdaddr(&btif_local_bd_addr);
+ 
++#ifdef BT_PUBLISH_LOCAL_ADDRESS
++  /* The stock K7 hci_qcomm_init runs separately and reads this property.
++   * Publish every selected address, including saved/NV paths, before enable
++   * can ask libbt-vendor to start hciattach. Do not use the vendor's reversed
++   * byte array: bdaddr_to_string preserves the stack's canonical byte order.
++   */
++  bdstr_t selected_address;
++  const uint8_t zero_address[BD_ADDR_LEN] = {0};
++  if (memcmp(btif_local_bd_addr.address, zero_address, BD_ADDR_LEN) == 0) {
++    LOG_ERROR("%s Refusing helper startup with an empty local address", __func__);
++    goto error_exit;
++  }
++  bdaddr_to_string(&btif_local_bd_addr, selected_address, sizeof(selected_address));
++  if (property_set(PERSIST_BDADDR_PROPERTY, selected_address) < 0) {
++    LOG_ERROR("%s Unable to publish local address for hci_qcomm_init", __func__);
++    goto error_exit;
++  }
++  LOG_INFO("%s Published local address %s for hci_qcomm_init", __func__, selected_address);
++#endif
++
+   bt_jni_workqueue_thread = thread_new(BT_JNI_WORKQUEUE_NAME);
+   if (bt_jni_workqueue_thread == NULL) {
+     LOG_ERROR("%s Unable to create thread %s", __func__, BT_JNI_WORKQUEUE_NAME);
+-- 
+2.47.3
+

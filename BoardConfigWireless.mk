@@ -22,6 +22,8 @@ WPA_SUPPLICANT_CONF_TEMPLATE := device/lge/m1-common/configs/wpa_supplicant.conf
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BLUETOOTH_HCI_USE_MCT := true
+# Hand the selected persistent identity to the retained stock helper.
+BOARD_BLUETOOTH_PUBLISH_LOCAL_ADDRESS := true
 
 # Keep the already staged K7 vendor library.  BOARD_HAVE_BLUETOOTH_QCOM would
 # replace it with a source-built libbt-vendor and is intentionally not selected.
