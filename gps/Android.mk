@@ -1,0 +1,9 @@
+LOCAL_PATH := $(call my-dir)
+include $(CLEAR_VARS)
+LOCAL_MODULE := gps.msm8909
+LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := gps_k7.c
+LOCAL_SHARED_LIBRARIES := libdl liblog
+LOCAL_CFLAGS := -Wall -Werror
+include $(BUILD_SHARED_LIBRARY)

@@ -3,6 +3,7 @@ $(call inherit-product, device/lge/msm8909-common/boot.mk)
 $(call inherit-product, device/lge/m1-common/sensors.mk)
 $(call inherit-product, device/lge/m1-common/heap.mk)
 $(call inherit-product, device/lge/m1-common/camera.mk)
+$(call inherit-product, device/lge/m1-common/gps.mk)
 
 # Platform providers are built by CM13. Do not overwrite them with Lollipop
 # libraries; see audit/PLATFORM_PROVIDER_INTEGRATION.md in the project workspace.
