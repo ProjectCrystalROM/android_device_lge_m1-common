@@ -3,6 +3,8 @@
 
 PRODUCT_PACKAGES += \
     libwpa_client \
+    libwifi-hal-qcom \
+    wpa_supplicant.conf \
     wcnss_service \
     wpa_supplicant
 
