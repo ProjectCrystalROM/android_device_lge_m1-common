@@ -40,3 +40,6 @@ The stable-address Bluetooth change also requires the reviewed platform patch
 [and application notes](bluetooth/README.md). Platform framework changes,
 Trusty/Java 7 build setup, package audit tools and checkpoint ZIPs live in the
 surrounding workspace. Preserve rollback packages; do not publish private logs.
+
+Required microG and Bluetooth platform patches are published with exact base
+commits in [platform notes](platform/README.md).
