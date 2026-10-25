@@ -22,7 +22,11 @@ PRODUCT_COPY_FILES += \
 # security=none cannot accept the SELinux context= FAT mount option. Select an
 # otherwise identical firmware mount rule only for the no-SELinux diagnostic.
 ifeq ($(TARGET_PRODUCT),cm_m1_radio_noselinux)
+ifeq ($(K7_SELINUX_PERMISSIVE),true)
+PRODUCT_COPY_FILES += device/lge/m1-common/rootdir/cm13/init.m1.fs.rc:root/init.m1.fs.rc
+else
 PRODUCT_COPY_FILES += device/lge/m1-common/rootdir/cm13/init.m1.fs.noselinux.rc:root/init.m1.fs.rc
+endif
 else
 PRODUCT_COPY_FILES += device/lge/m1-common/rootdir/cm13/init.m1.fs.rc:root/init.m1.fs.rc
 endif

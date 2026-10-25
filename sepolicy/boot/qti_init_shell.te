@@ -1,0 +1,8 @@
+# The stock init.qcom.bt.sh invokes btnvtool -O without a domain transition.
+allow qti_init_shell btnvtool_exec:file { getattr execute read open execute_no_trans };
+
+# hci_qcomm_init creates its client socket and connects to qmux_bluetooth.
+# Keep the existing shell domain and QCOM socket label; grant observed accesses.
+allow qti_init_shell qmuxd_socket:dir { write add_name };
+allow qti_init_shell qmuxd_socket:sock_file { create setattr write };
+allow qti_init_shell qmuxd:unix_stream_socket connectto;
