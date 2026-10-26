@@ -40,3 +40,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Display dimensions affect resources/boot animation, not a HAL selection.
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
+
+# CM12 SystemServer starts TorchService/AppWidgetService from these features.
+PRODUCT_COPY_FILES += device/lge/m1-common/permissions/peridot-cm12-ui-features.xml:system/etc/permissions/peridot-cm12-ui-features.xml

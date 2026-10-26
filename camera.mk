@@ -5,6 +5,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml
 
-# camera2.full/manual capabilities and unqualified autofocus/flash are not
-# advertised by this diagnostic selection.
+# Flash is declared by peridot-cm12-ui-features.xml for CM12 TorchService.
+# Camera2 full/manual capabilities and autofocus remain unadvertised.
 PRODUCT_PACKAGES += Camera2

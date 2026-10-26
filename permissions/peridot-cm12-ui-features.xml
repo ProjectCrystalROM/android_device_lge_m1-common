@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <!-- SystemServer gates the services required by SystemUI and Trebuchet. -->
+    <feature name="android.hardware.camera.flash" />
+    <feature name="android.software.app_widgets" />
+</permissions>
