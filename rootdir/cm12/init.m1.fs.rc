@@ -8,6 +8,14 @@ on init
     export EMULATED_STORAGE_TARGET /storage/emulated
     export MEDIA_STORAGE /data/media
     export SECONDARY_STORAGE /storage/external_SD
+    mkdir /mnt/shell/emulated 0700 shell shell
+    mkdir /storage/emulated 0555 root root
+    mkdir /storage/emulated/legacy 0555 root root
+    mkdir /storage/external_SD 0700 root root
+    mkdir /mnt/media_rw/external_SD 0700 media_rw media_rw
+    symlink /storage/emulated/legacy /sdcard
+    symlink /storage/emulated/legacy /mnt/sdcard
+    symlink /storage/emulated/legacy /storage/sdcard0
     mkdir /firmware 0771 system system
     mkdir /persist 0771 system system
     mkdir /persist-lg 0771 system system
@@ -34,5 +42,21 @@ on post-fs
     restorecon_recursive /persist
 
 on post-fs-data
+    mkdir /data/media 0770 media_rw media_rw
+    restorecon_recursive /data/media
     mkdir /data/time 0700 system system
     restorecon_recursive /data/time
+
+# Lollipop uses the sdcard FUSE daemon; its storage contract differs from M.
+service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
+    class late_start
+    oneshot
+
+service fuse_external_SD /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/external_SD /storage/external_SD
+    class late_start
+    disabled
+    oneshot
+
+on property:init.svc.sdcard=running
+    wait /mnt/shell/emulated/0 5
+    mount none /mnt/shell/emulated/0 /storage/emulated/legacy bind
