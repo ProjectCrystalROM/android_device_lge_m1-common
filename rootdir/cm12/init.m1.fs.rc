@@ -1,6 +1,13 @@
 # Mount paths/options derived from the supplied MS33010m boot ramdisk and GPT.
 # CM12.1 owns vold, encryption transitions, and emulated-storage services.
 on init
+    # Lollipop framework (including android.os.Debug during Zygote preload)
+    # requires these exports; CM13's storage environment is not compatible.
+    export EXTERNAL_STORAGE /storage/emulated/legacy
+    export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
+    export EMULATED_STORAGE_TARGET /storage/emulated
+    export MEDIA_STORAGE /data/media
+    export SECONDARY_STORAGE /storage/external_SD
     mkdir /firmware 0771 system system
     mkdir /persist 0771 system system
     mkdir /persist-lg 0771 system system
