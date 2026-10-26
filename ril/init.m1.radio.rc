@@ -1,8 +1,6 @@
 # Optional import from init.m1.rc; installed only by cm_m1_radio.
 # The CM core owns ril-daemon, rild/rild-debug sockets and /data/misc/radio.
 # The stock daemon ignores CM's extra SAP socket; no SAP function is fabricated.
-on init
-    export LD_SHIM_LIBS /system/lib/libril.so|libm1_ril_compat.so
 
 on post-fs-data
     mkdir /dev/socket/qmux_radio 0770 radio radio

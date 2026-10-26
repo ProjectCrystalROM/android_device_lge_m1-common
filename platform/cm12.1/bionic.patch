@@ -1,0 +1,170 @@
+diff --git a/libc/Android.mk b/libc/Android.mk
+index aa92ffd1..0e4c0f2a 100644
+--- a/libc/Android.mk
++++ b/libc/Android.mk
+@@ -74,6 +74,7 @@ libc_common_src_files += \
+     bionic/__FD_chk.cpp \
+     bionic/__fgets_chk.cpp \
+     bionic/__memmove_chk.cpp \
++    bionic/__pread_chk.cpp \
+     bionic/__read_chk.cpp \
+     bionic/__recvfrom_chk.cpp \
+     bionic/__stpcpy_chk.cpp \
+diff --git a/libc/bionic/pthread_atfork.cpp b/libc/bionic/pthread_atfork.cpp
+index b845f7de..08da5c90 100644
+--- a/libc/bionic/pthread_atfork.cpp
++++ b/libc/bionic/pthread_atfork.cpp
+@@ -28,6 +28,7 @@
+ 
+ #include <errno.h>
+ #include <pthread.h>
++#include <stdlib.h>
+ 
+ struct atfork_t {
+   atfork_t* next;
+@@ -36,6 +37,7 @@ struct atfork_t {
+   void (*prepare)(void);
+   void (*child)(void);
+   void (*parent)(void);
++  void* dso_handle;
+ };
+ 
+ struct atfork_list_t {
+@@ -85,7 +87,8 @@ void __bionic_atfork_run_parent() {
+   pthread_mutex_unlock(&g_atfork_list_mutex);
+ }
+ 
+-int pthread_atfork(void (*prepare)(void), void (*parent)(void), void(*child)(void)) {
++extern "C" int __register_atfork(void (*prepare)(void), void (*parent)(void),
++                                 void(*child)(void), void* dso) {
+   atfork_t* entry = reinterpret_cast<atfork_t*>(malloc(sizeof(atfork_t)));
+   if (entry == NULL) {
+     return ENOMEM;
+@@ -94,6 +97,7 @@ int pthread_atfork(void (*prepare)(void), void (*parent)(void), void(*child)(voi
+   entry->prepare = prepare;
+   entry->parent = parent;
+   entry->child = child;
++  entry->dso_handle = dso;
+ 
+   pthread_mutex_lock(&g_atfork_list_mutex);
+ 
+@@ -112,3 +116,27 @@ int pthread_atfork(void (*prepare)(void), void (*parent)(void), void(*child)(voi
+ 
+   return 0;
+ }
++
++// Preserve the legacy public API; registrations without a DSO keep their
++// original process-lifetime behavior.
++int pthread_atfork(void (*prepare)(void), void (*parent)(void), void(*child)(void)) {
++  return __register_atfork(prepare, parent, child, NULL);
++}
++
++// Called after that DSO's destructors have finished, before it is unmapped.
++extern "C" __LIBC_HIDDEN__ void __unregister_atfork(void* dso) {
++  pthread_mutex_lock(&g_atfork_list_mutex);
++  atfork_t* it = g_atfork_list.first;
++  while (it != NULL) {
++    atfork_t* next = it->next;
++    if (it->dso_handle == dso) {
++      if (it->prev != NULL) it->prev->next = it->next;
++      else g_atfork_list.first = it->next;
++      if (it->next != NULL) it->next->prev = it->prev;
++      else g_atfork_list.last = it->prev;
++      free(it);
++    }
++    it = next;
++  }
++  pthread_mutex_unlock(&g_atfork_list_mutex);
++}
+diff --git a/libc/bionic/strerror_r.cpp b/libc/bionic/strerror_r.cpp
+index 1e57cc0b..fc6c4095 100644
+--- a/libc/bionic/strerror_r.cpp
++++ b/libc/bionic/strerror_r.cpp
+@@ -62,6 +62,13 @@ int strerror_r(int error_number, char* buf, size_t buf_len) {
+   return 0;
+ }
+ 
++extern "C" char* __gnu_strerror_r(int error_number, char* buf, size_t buf_len) {
++  ErrnoRestorer errno_restorer; // The glibc strerror_r doesn't set errno if it truncates...
++  strerror_r(error_number, buf, buf_len);
++  return buf; // ...and just returns whatever fit.
++}
++
++
+ extern "C" __LIBC_HIDDEN__ const char* __strsignal(int signal_number, char* buf, size_t buf_len) {
+   const char* signal_name = __strsignal_lookup(signal_number);
+   if (signal_name != NULL) {
+diff --git a/libc/upstream-openbsd/lib/libc/stdlib/atexit.c b/libc/upstream-openbsd/lib/libc/stdlib/atexit.c
+index 6532b382..56b45e6f 100644
+--- a/libc/upstream-openbsd/lib/libc/stdlib/atexit.c
++++ b/libc/upstream-openbsd/lib/libc/stdlib/atexit.c
+@@ -108,6 +108,9 @@ unlock:
+  * object owning 'dso'.
+  * Note: if 'dso' is NULL, then all remaining handlers are called.
+  */
++/* DSO-aware atfork registrations must not outlive unloaded code. */
++extern void __unregister_atfork(void* dso);
++
+ void
+ __cxa_finalize(void *dso)
+ {
+@@ -161,6 +164,10 @@ restart:
+ 		__atexit = NULL;
+ 	}
+ 	_ATEXIT_UNLOCK();
++	if (dso != NULL) {
++		__unregister_atfork(dso);
++	}
++
+ }
+ 
+ /*
+diff --git a/libc/bionic/__pread_chk.cpp b/libc/bionic/__pread_chk.cpp
+new file mode 100644
+index 00000000..7109ce68
+--- /dev/null
++++ b/libc/bionic/__pread_chk.cpp
+@@ -0,0 +1,43 @@
++/*
++ * Copyright (C) 2015 The Android Open Source Project
++ * All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ *  * Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ *  * Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in
++ *    the documentation and/or other materials provided with the
++ *    distribution.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
++ * FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
++ * COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
++ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
++ * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
++ * OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
++ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
++ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
++ * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++ * SUCH DAMAGE.
++ */
++
++#undef _FORTIFY_SOURCE
++#include <unistd.h>
++#include "private/libc_logging.h"
++
++extern "C" ssize_t __pread_chk(int fd, void* buf, size_t count, off_t offset, size_t buf_size) {
++  if (__predict_false(count > buf_size)) {
++    __fortify_chk_fail("pread: prevented write past end of buffer", 0);
++  }
++
++  if (__predict_false(count > SSIZE_MAX)) {
++    __fortify_chk_fail("pread: count > SSIZE_MAX", 0);
++  }
++
++  return pread(fd, buf, count, offset);
++}

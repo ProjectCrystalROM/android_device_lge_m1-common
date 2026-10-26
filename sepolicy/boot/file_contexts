@@ -2,6 +2,5 @@
 /persist-lg(/.*)?                 u:object_r:persist_drm_file:s0
 /sns(/.*)?                        u:object_r:sensors_persist_file:s0
 /mpt(/.*)?                        u:object_r:persist_file:s0
-/system/bin/thermal-engine        u:object_r:thermal-engine_exec:s0
 # LG names the existing Qualcomm diag driver diag_lge.
 /dev/diag_lge                    u:object_r:diag_device:s0

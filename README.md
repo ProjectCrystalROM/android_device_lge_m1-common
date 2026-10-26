@@ -1,3 +1,16 @@
+# CM12.1 common-device branch — experimental
+
+Android 5.1.1/API22 integration is under build validation. Use the platform
+patches in [platform/cm12.1](platform/cm12.1/README.md). The CM13 patches in
+the parent platform/bluetooth directories are historical references here.
+
+This branch selects direct stock GPS with a K7 JNI callback correction, stock
+SensorManager-compatible camera plugin, and no RIL compatibility shim. The
+separate `rootdir/cm12` is the active ramdisk. CM13 hardware acceptance does
+not establish CM12 runtime acceptance. Earlier documentation follows.
+
+---
+
 # LG K7 CM13 common device tree
 
 **2026-10-25: hardware-qualified in the enforcing `cm_m1-userdebug` ROM on

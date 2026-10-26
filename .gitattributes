@@ -7,3 +7,6 @@ proprietary-blobs.txt text eol=lf
 fstab.* text eol=lf
 *.te text eol=lf
 file_contexts text eol=lf
+
+# Patch context intentionally contains leading blanks and original indentation.
+platform/cm12.1/*.patch -whitespace

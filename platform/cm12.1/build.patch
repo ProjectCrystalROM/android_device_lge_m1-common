@@ -1,0 +1,18 @@
+diff --git a/core/tasks/dt_image.mk b/core/tasks/dt_image.mk
+index 48a2ce79d..fb55eb3a4 100644
+--- a/core/tasks/dt_image.mk
++++ b/core/tasks/dt_image.mk
+@@ -26,10 +26,13 @@ define build-dtimage-target
+     $(hide) chmod a+r $@
+ endef
+ 
++ifneq ($(BOARD_KERNEL_PREBUILT_DT),true)
+ $(INSTALLED_DTIMAGE_TARGET): $(DTBTOOL) $(INSTALLED_KERNEL_TARGET)
+ 	$(build-dtimage-target)
+ 	@echo -e ${CL_CYN}"Made DT image: $@"${CL_RST}
+ 
++endif # source-generated DT
++
+ ALL_DEFAULT_INSTALLED_MODULES += $(INSTALLED_DTIMAGE_TARGET)
+ ALL_MODULES.$(LOCAL_MODULE).INSTALLED += $(INSTALLED_DTIMAGE_TARGET)
+ endif

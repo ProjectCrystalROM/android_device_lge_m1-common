@@ -1,0 +1,22 @@
+diff --git a/libs/binder/Android.mk b/libs/binder/Android.mk
+index 9a789eeb2..1fe2daa02 100644
+--- a/libs/binder/Android.mk
++++ b/libs/binder/Android.mk
+@@ -79,6 +79,9 @@ LOCAL_CFLAGS += -DBINDER_IPC_32BIT=1
+ endif
+ endif
+ LOCAL_CFLAGS += -Werror
++ifeq ($(BOARD_NEEDS_LGE_RIL_SYMBOLS),true)
++LOCAL_CFLAGS += -DNEEDS_LGE_RIL_SYMBOLS
++endif
+ include $(BUILD_SHARED_LIBRARY)
+ 
+ include $(CLEAR_VARS)
+@@ -112,4 +115,7 @@ LOCAL_CFLAGS += -DBINDER_IPC_32BIT=1
+ endif
+ endif
+ LOCAL_CFLAGS += -Werror
++ifeq ($(BOARD_NEEDS_LGE_RIL_SYMBOLS),true)
++LOCAL_CFLAGS += -DNEEDS_LGE_RIL_SYMBOLS
++endif
+ include $(BUILD_STATIC_LIBRARY)

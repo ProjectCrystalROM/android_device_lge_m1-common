@@ -1,0 +1,9 @@
+{
+  "frameworks/base": "2562e11eea3c6aa659156b04f898a43d68a82994",
+  "frameworks/native": "ccc63f438d5dd460725d3a40df5bb79829872762",
+  "external/bluetooth/bluedroid": "1a779139ae020c59e22ceac42e1aabcf6e1d5e04",
+  "build": "3befa38fc9144c5f96dda060c8563930638c6f9a",
+  "hardware/ril": "e732d9aa6d8988dcfc40f1f53b1709b94a3bdf71",
+  "hardware/qcom/audio-caf/msm8916": "ae92537deb2006b163d8d9c8e0ff37848475931a",
+  "bionic": "852eb1a52eba1d6d94c21adccad4725ee548a8f2"
+}

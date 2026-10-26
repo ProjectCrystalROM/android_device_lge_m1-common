@@ -1,0 +1,38 @@
+[
+  {
+    "path": "frameworks/base",
+    "base": "2562e11eea3c6aa659156b04f898a43d68a82994",
+    "patch": "frameworks-base.patch",
+    "sha256": "447477473ff2250d801fce7267fd1fad24686392b2ad1678d128740581bc3895"
+  },
+  {
+    "path": "frameworks/native",
+    "base": "ccc63f438d5dd460725d3a40df5bb79829872762",
+    "patch": "frameworks-native.patch",
+    "sha256": "4761cf2c5acb168abbdf26eb530a9fc9fd48a22613e3155f3a42cd086a8d7896"
+  },
+  {
+    "path": "external/bluetooth/bluedroid",
+    "base": "1a779139ae020c59e22ceac42e1aabcf6e1d5e04",
+    "patch": "bluedroid.patch",
+    "sha256": "b6169a60204b65684a6e07c324e09bbd0119cd0116473e3aa6543d007e93f89d"
+  },
+  {
+    "path": "build",
+    "base": "3befa38fc9144c5f96dda060c8563930638c6f9a",
+    "patch": "build.patch",
+    "sha256": "b68833c6974ccae622278bae35896481fecc4a01f5f5b3ddace3e3fe1fef6a33"
+  },
+  {
+    "path": "hardware/ril",
+    "base": "e732d9aa6d8988dcfc40f1f53b1709b94a3bdf71",
+    "patch": "hardware-ril.patch",
+    "sha256": "1f28ac4c560355b6544bd39137947fd6694e812e2d50ae379e2ae701f858b16c"
+  },
+  {
+    "path": "bionic",
+    "base": "852eb1a52eba1d6d94c21adccad4725ee548a8f2",
+    "patch": "bionic.patch",
+    "sha256": "7a2e34730f388dac1eeef28bb9bb3ee8300402b94ddf20cd223a8b004467fe29"
+  }
+]

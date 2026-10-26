@@ -1,7 +1,7 @@
 $(call inherit-product, device/lge/m1-common/ril/source-providers.mk)
 
-# Experimental product only: source bridges need real CM Binder qualification.
-PRODUCT_PACKAGES += rild libril libm1_ril_compat
+# Matched stock daemon and RIL; CM12 Binder provides both required LG names.
+PRODUCT_PACKAGES += rild libril
 PRODUCT_COPY_FILES += \
     device/lge/m1-common/ril/init.m1.radio.rc:root/init.m1.radio.rc \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml

@@ -1,4 +1,2 @@
-# Archived libmmcamera_faceproc.so has DT_TEXTREL/DF_TEXTREL (04123247...8cb0f).
-# Android M's execmod neverallow excludes system_file; retain that upstream rule.
-# This applies to system_file objects accessed by this daemon, not one pathname.
+# The retained stock faceproc library contains text relocations on Lollipop too.
 allow mm-qcamerad system_file:file execmod;

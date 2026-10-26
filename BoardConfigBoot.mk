@@ -14,11 +14,12 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-# CM13 packages this separate DT in boot/recovery AND target-files/OTA metadata.
+# CM12 packages the stock DT in boot/recovery and target-files/OTA metadata.
+# Apply the platform/cm12.1 build patch to preserve this prebuilt DT.
 BOARD_KERNEL_SEPARATED_DT := true
 # This DT is archived/prebuilt; suppress dtbTool regeneration from kernel sources.
 BOARD_KERNEL_PREBUILT_DT := true
 BOARD_SEPOLICY_DIRS += device/lge/m1-common/sepolicy/boot
 
 # CM owns battery_fail.png; retain only AOSP's distinct fallback battery scale.
-BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/lge/m1-common/rootdir/cm13/charger
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/lge/m1-common/rootdir/cm12/charger

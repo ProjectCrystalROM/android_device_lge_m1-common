@@ -1,3 +1,4 @@
+ifneq ($(PLATFORM_SDK_VERSION),22)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := gps.msm8909
@@ -7,3 +8,5 @@ LOCAL_SRC_FILES := gps_k7.c
 LOCAL_SHARED_LIBRARIES := libdl liblog
 LOCAL_CFLAGS := -Wall -Werror
 include $(BUILD_SHARED_LIBRARY)
+
+endif

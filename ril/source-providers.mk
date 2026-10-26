@@ -52,8 +52,10 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libqsap_sdk \
     libqservice \
-    librmnetctl \
     libstagefrighthw \
     libtinycompress \
     libtinyxml \
     libtinyxml2
+
+# Source owns these CM12 platform libraries instead of duplicate copy rules.
+PRODUCT_PACKAGES += libaudioparameter libbson libdivxdrmdecrypt libstlport

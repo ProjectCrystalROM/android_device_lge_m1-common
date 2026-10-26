@@ -1,0 +1,8 @@
+# block-device mount-point filesystem mount-flags fs_mgr-flags
+# No formattable/forceencrypt flags: preserve the stock separate encrypt metadata.
+/dev/block/bootdevice/by-name/system   /system     ext4 ro,barrier=1,noatime,discard wait
+/dev/block/bootdevice/by-name/cache    /cache      ext4 nosuid,nodev,noatime,barrier=1,data=ordered,errors=continue wait,check
+/dev/block/bootdevice/by-name/userdata /data       ext4 nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue,discard wait,check,encryptable=/dev/block/bootdevice/by-name/encrypt
+# Zram activation awaits an explicitly verified CM12.1 mkswap provider.
+# Removable storage is managed by Lollipop vold, not the stock sdcard service.
+/devices/soc.0/7864900.sdhci/mmc_host auto auto defaults voldmanaged=external_SD:auto,encryptable=userdata

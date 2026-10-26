@@ -1,3 +1,0 @@
-# ActivityThread enables StrictMode for system apps on userdebug/eng builds.
-# StrictMode.setVmPolicy looks up this service for its own UID cleartext policy.
-allow themeservice_app network_management_service:service_manager find;

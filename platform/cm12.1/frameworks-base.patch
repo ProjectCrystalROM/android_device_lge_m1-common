@@ -1,0 +1,155 @@
+diff --git a/api/current.txt b/api/current.txt
+index 35423fdcbfe..14b40745016 100644
+--- a/api/current.txt
++++ b/api/current.txt
+@@ -64,6 +64,7 @@ package android {
+     field public static final java.lang.String DUMP = "android.permission.DUMP";
+     field public static final java.lang.String EXPAND_STATUS_BAR = "android.permission.EXPAND_STATUS_BAR";
+     field public static final java.lang.String FACTORY_TEST = "android.permission.FACTORY_TEST";
++    field public static final java.lang.String FAKE_PACKAGE_SIGNATURE = "android.permission.FAKE_PACKAGE_SIGNATURE";
+     field public static final java.lang.String FLASHLIGHT = "android.permission.FLASHLIGHT";
+     field public static final java.lang.String FORCE_BACK = "android.permission.FORCE_BACK";
+     field public static final java.lang.String GET_ACCOUNTS = "android.permission.GET_ACCOUNTS";
+diff --git a/api/system-current.txt b/api/system-current.txt
+index f4775611687..f6658e0d42c 100644
+--- a/api/system-current.txt
++++ b/api/system-current.txt
+@@ -86,6 +86,7 @@ package android {
+     field public static final java.lang.String DUMP = "android.permission.DUMP";
+     field public static final java.lang.String EXPAND_STATUS_BAR = "android.permission.EXPAND_STATUS_BAR";
+     field public static final java.lang.String FACTORY_TEST = "android.permission.FACTORY_TEST";
++    field public static final java.lang.String FAKE_PACKAGE_SIGNATURE = "android.permission.FAKE_PACKAGE_SIGNATURE";
+     field public static final java.lang.String FLASHLIGHT = "android.permission.FLASHLIGHT";
+     field public static final java.lang.String FORCE_BACK = "android.permission.FORCE_BACK";
+     field public static final java.lang.String FORCE_STOP_PACKAGES = "android.permission.FORCE_STOP_PACKAGES";
+diff --git a/core/java/android/content/pm/PackageParser.java b/core/java/android/content/pm/PackageParser.java
+index a780d868b8c..04a2c810640 100644
+--- a/core/java/android/content/pm/PackageParser.java
++++ b/core/java/android/content/pm/PackageParser.java
+@@ -609,10 +609,23 @@ public class PackageParser {
+             }
+         }
+         if ((flags&PackageManager.GET_SIGNATURES) != 0) {
+-           int N = (p.mSignatures != null) ? p.mSignatures.length : 0;
+-           if (N > 0) {
+-                pi.signatures = new Signature[N];
+-                System.arraycopy(p.mSignatures, 0, pi.signatures, 0, N);
++            boolean handledFakeSignature = false;
++            try {
++                if (p.requestedPermissions.contains("android.permission.FAKE_PACKAGE_SIGNATURE") && p.mAppMetaData != null
++                        && p.mAppMetaData.get("fake-signature") instanceof String) {
++                    pi.signatures = new Signature[] {new Signature(p.mAppMetaData.getString("fake-signature"))};
++                    handledFakeSignature = true;
++                }
++            } catch (Throwable t) {
++                // We should never die because of any failures, this is system code!
++                Log.w("PackageParser.FAKE_PACKAGE_SIGNATURE", t);
++            }
++            if (!handledFakeSignature) {
++                int N = (p.mSignatures != null) ? p.mSignatures.length : 0;
++                if (N > 0) {
++                    pi.signatures = new Signature[N];
++                    System.arraycopy(p.mSignatures, 0, pi.signatures, 0, N);
++                }
+             }
+         }
+         return pi;
+diff --git a/core/res/AndroidManifest.xml b/core/res/AndroidManifest.xml
+index cf5fc5ad10d..af4bcfb54ec 100644
+--- a/core/res/AndroidManifest.xml
++++ b/core/res/AndroidManifest.xml
+@@ -1837,6 +1837,13 @@
+         android:label="@string/permlab_getPackageSize"
+         android:description="@string/permdesc_getPackageSize" />
+ 
++    <!-- Allows an application to change the package signature as seen by applications -->
++    <permission android:name="android.permission.FAKE_PACKAGE_SIGNATURE"
++                android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
++                android:protectionLevel="dangerous"
++                android:label="@string/permlab_fakePackageSignature"
++                android:description="@string/permdesc_fakePackageSignature" />
++
+     <!-- @deprecated No longer useful, see
+          {@link android.content.pm.PackageManager#addPackageToPreferred}
+          for details. -->
+diff --git a/core/res/res/values/config.xml b/core/res/res/values/config.xml
+index 31ad7aa9d29..f6e90a48007 100755
+--- a/core/res/res/values/config.xml
++++ b/core/res/res/values/config.xml
+@@ -1183,6 +1183,7 @@
+     <string-array name="config_locationProviderPackageNames" translatable="false">
+         <!-- The standard AOSP fused location provider -->
+         <item>com.android.location.fused</item>
++        <item>com.google.android.gms</item>
+     </string-array>
+ 
+     <!-- This string array can be overriden to enable test location providers initially. -->
+diff --git a/core/res/res/values/strings.xml b/core/res/res/values/strings.xml
+index fea5d3c4f90..270db520e69 100644
+--- a/core/res/res/values/strings.xml
++++ b/core/res/res/values/strings.xml
+@@ -1285,6 +1285,11 @@
+     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+     <string name="permdesc_getPackageSize">Allows the app to retrieve its code, data, and cache sizes</string>
+ 
++    <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
++    <string name="permlab_fakePackageSignature">mimic package signature</string>
++    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
++    <string name="permdesc_fakePackageSignature">Allows the app to use mimic another app\'s package signature.</string>
++
+     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+     <string name="permlab_installPackages">directly install apps</string>
+     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+diff --git a/services/core/jni/Android.mk b/services/core/jni/Android.mk
+index 904fce5bc33..a775fd76eb4 100644
+--- a/services/core/jni/Android.mk
++++ b/services/core/jni/Android.mk
+@@ -70,3 +70,7 @@ $(shell mkdir -p $(OUT)/obj/SHARED_LIBRARIES/libtime_genoff_intermediates/)
+ $(shell touch $(OUT)/obj/SHARED_LIBRARIES/libtime_genoff_intermediates/export_includes)
+ endif
+ 
++
++ifeq ($(BOARD_GPS_XTRA_THREE_CALLBACKS),true)
++LOCAL_CFLAGS += -DK7_GPS_XTRA_THREE_CALLBACKS
++endif
+diff --git a/services/core/jni/com_android_server_location_GpsLocationProvider.cpp b/services/core/jni/com_android_server_location_GpsLocationProvider.cpp
+index 0d3fdf6ac38..750f7657463 100644
+--- a/services/core/jni/com_android_server_location_GpsLocationProvider.cpp
++++ b/services/core/jni/com_android_server_location_GpsLocationProvider.cpp
+@@ -30,6 +30,7 @@
+ 
+ #include <arpa/inet.h>
+ #include <string.h>
++#include <stddef.h>
+ #include <pthread.h>
+ #include <linux/in.h>
+ #include <linux/in6.h>
+@@ -171,10 +172,28 @@ static void xtra_download_request_callback()
+     checkAndClearExceptionFromCallback(env, __FUNCTION__);
+ }
+ 
++#ifdef K7_GPS_XTRA_THREE_CALLBACKS
++// LG reads an optional third callback beyond the standard two-pointer object.
++// Keep the prefix unchanged and the extra pointer explicitly NULL for life.
++struct K7GpsXtraCallbacks {
++    GpsXtraCallbacks standard;
++    void (*report_xtra_server_cb)(const char*, const char*, const char*);
++};
++typedef char K7GpsXtraCallbackLayout[
++    sizeof(GpsXtraCallbacks) == 2 * sizeof(void*) &&
++    offsetof(K7GpsXtraCallbacks, report_xtra_server_cb) == sizeof(GpsXtraCallbacks)
++    ? 1 : -1];
++static K7GpsXtraCallbacks sK7GpsXtraCallbacks = {
++    { xtra_download_request_callback, create_thread_callback },
++    NULL,
++};
++#define sGpsXtraCallbacks sK7GpsXtraCallbacks.standard
++#else
+ GpsXtraCallbacks sGpsXtraCallbacks = {
+     xtra_download_request_callback,
+     create_thread_callback,
+ };
++#endif
+ 
+ static jbyteArray convert_to_ipv4(uint32_t ip, bool net_order)
+ {
