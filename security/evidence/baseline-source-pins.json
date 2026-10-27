@@ -1,0 +1,72 @@
+[
+  {
+    "path": "frameworks/base",
+    "commit": "774fb81e2a637ecbbde95d837c859bdabdc17bc6",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "frameworks/native",
+    "commit": "820cfb1be769526dd89cef0e8127fb2649b0a415",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "bionic",
+    "commit": "103e8952ebf5f1795a27973bf3981a32c63bf047",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "external/bluetooth/bluedroid",
+    "commit": "7bb6ab4ad07ce57b6f0e814f615d5ef225704856",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "build",
+    "commit": "307c10600a605f6f90597235f65592219c81a490",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "hardware/ril",
+    "commit": "892be3c6ff2a275cb875378eee9632c48c74cf3e",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "device/lge/m1",
+    "commit": "8244a12a4a906bce28e654419f34105f002f5b17",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "device/lge/msm8909-common",
+    "commit": "b32b7bade4b7c29677f3aabdf98016b58205efd4",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "vendor/lge/m1",
+    "commit": "d4cd7ba0e084ac88ec616ece8b6204a86d3c5066",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "device/lge/m1-common",
+    "commit": "5f6f9d8926d6d6bd379a7500819eec7ae80feb8f",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "packages/apps/Gallery2",
+    "commit": "774b3a12cf59b5d77df505cc6753ef30f9d12420",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "kernel/lge/m1-custom",
+    "commit": "add12d0101cfbe639d4bab33ce66e326c2552f11",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "frameworks/av",
+    "commit": "e895b3f17d378a2bc2dfd0f70ce7d47bc42196b3",
+    "working_tree_clean_before_ledger": true
+  },
+  {
+    "path": "vendor/cm",
+    "commit": "38fd3719e144cce641bfcb0e19e323719430bf7a",
+    "working_tree_clean_before_ledger": true
+  }
+]
