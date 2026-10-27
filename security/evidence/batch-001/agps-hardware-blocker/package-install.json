@@ -1,0 +1,13 @@
+{
+  "kind": "install",
+  "single_system_library_only": true,
+  "checks_existing_library_SHA1_against_both_versions": true,
+  "old_sha256": "27edab78cfb394d2ba212853383aa0e435b48a0e8cee82cd13b77ff3c09517a6",
+  "new_sha256": "b7d9893e488265df7228591a3f68adfce65b8f2fc8dfa4abae3ece3357e7c8c8",
+  "ARM32": true,
+  "exported_symbols_and_dependencies_unchanged": true,
+  "kernel_unchanged": true,
+  "recovery_unchanged": true,
+  "userdata_untouched": true,
+  "installed_on_phone": false
+}

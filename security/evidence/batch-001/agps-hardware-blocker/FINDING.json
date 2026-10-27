@@ -1,0 +1,15 @@
+{
+  "owner_network": "PASS",
+  "owner_Bluetooth": "PASS",
+  "owner_camera": "FAIL: preview then system_server crash",
+  "owner_GPS_Toolbox": "FAIL: same crash",
+  "symbolized_crash": "AGPS data_conn_open_with_apn_ip_type call in GpsLocationProvider JNI",
+  "live_interface_size": 28,
+  "typed_callback_null": true,
+  "legacy_callback_present": true,
+  "same_userspace_as_prior_baseline": true,
+  "framework_fix_commit": "6900bd325d3",
+  "framework_draft_PR": "https://github.com/ProjectCrystalROM/android_frameworks_base/pull/1",
+  "runtime_hotfix_validation": "pending",
+  "phone_modified_by_agent": false
+}

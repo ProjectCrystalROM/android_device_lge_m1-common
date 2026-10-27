@@ -1,0 +1,16 @@
+{
+  "fixed": {
+    "exit_code": 0,
+    "log": "fixed-dispatch-result.txt"
+  },
+  "baseline": {
+    "exit_code": 1,
+    "log": "baseline-dispatch-result.txt"
+  },
+  "cases": 7,
+  "uses_actual_JNI_function": true,
+  "uses_actual_AGPS_struct_definitions": true,
+  "pointer_size_32bit": true,
+  "AddressSanitizer": true,
+  "phone_modified": false
+}
