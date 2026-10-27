@@ -21,7 +21,7 @@
     "path": "build",
     "base": "3befa38fc9144c5f96dda060c8563930638c6f9a",
     "patch": "build.patch",
-    "sha256": "b68833c6974ccae622278bae35896481fecc4a01f5f5b3ddace3e3fe1fef6a33"
+    "sha256": "8ea30b649853faab8182cb76b16c8b89f35518db8378eab4c42eda2342ba89db"
   },
   {
     "path": "hardware/ril",
@@ -33,6 +33,12 @@
     "path": "bionic",
     "base": "852eb1a52eba1d6d94c21adccad4725ee548a8f2",
     "patch": "bionic.patch",
-    "sha256": "7a2e34730f388dac1eeef28bb9bb3ee8300402b94ddf20cd223a8b004467fe29"
+    "sha256": "f35dee49d9a92fc2b3e8af0375603fde3d9169da28bc482a8357926fece0b37c"
+  },
+  {
+    "path": "packages/apps/Gallery2",
+    "base": "1e8ae8d944b80a5c9e2657acb2dae76918db766c",
+    "patch": "gallery2.patch",
+    "sha256": "ce5c17877325be7485e3c7da04d996f02375ed5d49a4f6e26658df0186cec375"
   }
 ]

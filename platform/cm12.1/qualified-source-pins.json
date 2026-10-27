@@ -1,0 +1,74 @@
+[
+  {
+    "path": "frameworks/base",
+    "head": "774fb81e2a637ecbbde95d837c859bdabdc17bc6",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  },
+  {
+    "path": "frameworks/native",
+    "head": "820cfb1be769526dd89cef0e8127fb2649b0a415",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  },
+  {
+    "path": "bionic",
+    "head": "103e8952ebf5f1795a27973bf3981a32c63bf047",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  },
+  {
+    "path": "external/bluetooth/bluedroid",
+    "head": "7bb6ab4ad07ce57b6f0e814f615d5ef225704856",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  },
+  {
+    "path": "build",
+    "head": "307c10600a605f6f90597235f65592219c81a490",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  },
+  {
+    "path": "hardware/ril",
+    "head": "892be3c6ff2a275cb875378eee9632c48c74cf3e",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  },
+  {
+    "path": "device/lge/m1",
+    "head": "d730141141bc9125b1a677cd8dc84d72622010e5",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  },
+  {
+    "path": "device/lge/msm8909-common",
+    "head": "b32b7bade4b7c29677f3aabdf98016b58205efd4",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  },
+  {
+    "path": "vendor/lge/m1",
+    "head": "18bc953be825850b9812a63bb6f9a05aae9f3e09",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  },
+  {
+    "path": "device/lge/m1-common",
+    "head": "b07db9d2ae44e2a082ef3eb5525281a4e0bcd923",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  },
+  {
+    "path": "packages/apps/Gallery2",
+    "head": "774b3a12cf59b5d77df505cc6753ef30f9d12420",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  },
+  {
+    "path": "kernel/lge/m1-custom",
+    "head": "add12d0101cfbe639d4bab33ce66e326c2552f11",
+    "branch": "cm12.1",
+    "tracked_clean": true
+  }
+]

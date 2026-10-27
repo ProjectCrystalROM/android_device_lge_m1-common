@@ -1,0 +1,13 @@
+diff --git a/src/com/android/gallery3d/app/MovieActivity.java b/src/com/android/gallery3d/app/MovieActivity.java
+index f6fcaf87c..5da866b23 100644
+--- a/src/com/android/gallery3d/app/MovieActivity.java
++++ b/src/com/android/gallery3d/app/MovieActivity.java
+@@ -792,7 +792,7 @@ public class MovieActivity extends Activity {
+             Log.v(TAG, "setActionBarTitle(" + title + ")");
+         }
+         ActionBar actionBar = getActionBar();
+-        if (title != null) {
++        if (title != null && actionBar != null) {
+             actionBar.setTitle(title);
+         }
+     }

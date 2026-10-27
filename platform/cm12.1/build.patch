@@ -1,3 +1,32 @@
+diff --git a/core/Makefile b/core/Makefile
+index 9ab196a32..037da6319 100644
+--- a/core/Makefile
++++ b/core/Makefile
+@@ -1104,6 +1104,7 @@ SYSTEMIMAGE_SOURCE_DIR := $(TARGET_OUT)
+ # as the source (since they are very similar).  Generate the patch so
+ # we can see how big it's going to be, and include that in the system
+ # image size check calculation.
++ifneq ($(TARGET_PRESERVE_INSTALLED_RECOVERY),true)
+ ifneq ($(INSTALLED_RECOVERYIMAGE_TARGET),)
+ intermediates := $(call intermediates-dir-for,PACKAGING,recovery_patch)
+ ifndef BOARD_CANT_BUILD_RECOVERY_FROM_BOOT_PATCH
+@@ -1125,6 +1126,8 @@ endif
+ endif
+ 
+ 
++endif # TARGET_PRESERVE_INSTALLED_RECOVERY
++
+ $(INSTALLED_SYSTEMIMAGE): $(BUILT_SYSTEMIMAGE) $(RECOVERY_FROM_BOOT_PATCH) | $(ACP)
+ 	@echo -e ${CL_CYN}"Install system fs image: $@"${CL_RST}
+ 	$(copy-file-to-target)
+@@ -1618,6 +1621,7 @@ endif
+ ifdef BOARD_RECOVERYIMAGE_PARTITION_SIZE
+ 	$(hide) echo "recovery_size=$(BOARD_RECOVERYIMAGE_PARTITION_SIZE)" >> $(zip_root)/META/misc_info.txt
+ endif
++	$(hide) echo "preserve_installed_recovery=$(TARGET_PRESERVE_INSTALLED_RECOVERY)" >> $(zip_root)/META/misc_info.txt
+ ifdef TARGET_RECOVERY_FSTYPE_MOUNT_OPTIONS
+ 	@# TARGET_RECOVERY_FSTYPE_MOUNT_OPTIONS can be empty to indicate that nothing but defaults should be used.
+ 	$(hide) echo "recovery_mount_options=$(TARGET_RECOVERY_FSTYPE_MOUNT_OPTIONS)" >> $(zip_root)/META/misc_info.txt
 diff --git a/core/tasks/dt_image.mk b/core/tasks/dt_image.mk
 index 48a2ce79d..fb55eb3a4 100644
 --- a/core/tasks/dt_image.mk
@@ -16,3 +45,33 @@ index 48a2ce79d..fb55eb3a4 100644
  ALL_DEFAULT_INSTALLED_MODULES += $(INSTALLED_DTIMAGE_TARGET)
  ALL_MODULES.$(LOCAL_MODULE).INSTALLED += $(INSTALLED_DTIMAGE_TARGET)
  endif
+diff --git a/tools/releasetools/common.py b/tools/releasetools/common.py
+index 499e8c266..aa792c9c3 100755
+--- a/tools/releasetools/common.py
++++ b/tools/releasetools/common.py
+@@ -1273,6 +1273,9 @@ def MakeRecoveryPatch(input_dir, output_sink, recovery_img, boot_img,
+   if info_dict is None:
+     info_dict = OPTIONS.info_dict
+ 
++  if info_dict.get("preserve_installed_recovery") == "true":
++    return
++
+   diff_program = ["imgdiff"]
+   path = os.path.join(input_dir, "SYSTEM", "etc", "recovery-resource.dat")
+   if os.path.exists(path):
+diff --git a/tools/releasetools/ota_from_target_files b/tools/releasetools/ota_from_target_files
+index 011fe53fe..855dc192f 100755
+--- a/tools/releasetools/ota_from_target_files
++++ b/tools/releasetools/ota_from_target_files
+@@ -533,7 +533,10 @@ def WriteFullOTAPackage(input_zip, output_zip):
+       info_dict=OPTIONS.info_dict)
+ 
+   has_recovery_patch = HasRecoveryPatch(input_zip)
+-  block_based = OPTIONS.block_based and has_recovery_patch
++  preserve_recovery = OPTIONS.info_dict.get("preserve_installed_recovery") == "true"
++  if preserve_recovery and OPTIONS.two_step:
++    raise common.ExternalError("two-step OTA cannot preserve installed recovery")
++  block_based = OPTIONS.block_based and (has_recovery_patch or preserve_recovery)
+ 
+   #if not OPTIONS.omit_prereq:
+   #  ts = GetBuildProp("ro.build.date.utc", OPTIONS.info_dict)

@@ -5,5 +5,6 @@
   "build": "3befa38fc9144c5f96dda060c8563930638c6f9a",
   "hardware/ril": "e732d9aa6d8988dcfc40f1f53b1709b94a3bdf71",
   "hardware/qcom/audio-caf/msm8916": "ae92537deb2006b163d8d9c8e0ff37848475931a",
-  "bionic": "852eb1a52eba1d6d94c21adccad4725ee548a8f2"
+  "bionic": "852eb1a52eba1d6d94c21adccad4725ee548a8f2",
+  "packages/apps/Gallery2": "1e8ae8d944b80a5c9e2657acb2dae76918db766c"
 }

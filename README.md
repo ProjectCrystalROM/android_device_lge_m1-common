@@ -1,3 +1,38 @@
+# CM12.1 hardware-qualified MS330 baseline — 2026-10-26
+
+The cm12.1 branch is separate from CM13. Owner validated the signed DSI-fix
+ROM: normal boot, home screen and sleep/wake; Wi-Fi/browser access; Bluetooth
+pairing, notification audio and reboot persistence; front/rear photo and video
+capture; Gallery recorded-video playback with audio; GPS (~20 satellites, ~6m
+reported accuracy); GSM SIM recognition; LTE browser access and YouTube
+streaming after reboot with the correct nxtgenphone APN.
+
+The missing stock /system/etc/data/dsi_config.xml was the shared CM12/CM13 data
+initialization blocker. Vendor source18bc953 restores it; CM13 live test and
+CM12 signed-ROM runtime test passed. Source APN defaults were edited later and
+are not part of this hardware-qualified ROM; saved owner APN was used.
+
+CM12 Cyanogen recovery is BROKEN: Finding recovery package... followed by
+bootloader. TWRP is the intended installed recovery. Full OTA preserves it;
+separate CM recovery retest failed and must not be presented as working.
+SIM changes require reboot; CSIM and voice/VoLTE remain outside this profile.
+MicroG account/push and the WebView95 candidate are not newly qualified.
+
+Reproduction uses Java7/Trusty; kernel/lge/m1-custom points to the independent
+custom kernel on cm12.1, published in airi-kozume/cyanogenmod_kernel_lge_m1
+cm12.1 (different kernel history from the CM13 branch). Original custom kernel
+source remains unchanged. Common-tree platform/cm12.1 contains exact platform
+patches, hashes and source pins, including Gallery and libc changes.
+
+Hardware-qualified ROM SHA256:
+8ba5854e5c7b92757cd652fcd750d85e9430afe77f27ac5ee4a43a03a14d9e26
+ROM filename: cm-12.1-20261027-UNOFFICIAL-m1-peridot-data-fix.zip
+(UTC build date; local qualification October26.) Offline release-signature,
+81 APK, 17 kernel-module, DSI ext4 metadata, OTA block and recovery-preservation
+checks passed. Keys, generated images and private raw logs are not published.
+
+Earlier entries below retain their original chronological status.
+
 # CM12.1 common-device branch — experimental
 
 Android 5.1.1/API22 integration is under build validation. Use the platform
