@@ -1,0 +1,118 @@
+{
+  "baseline": "audit/cm12-port/data-fix-20261026/signed-target_files.zip",
+  "changed_files": [
+    {
+      "path": "SYSTEM/etc/recovery-resource.dat",
+      "old_sha256": "0f6dbb20124c817ff76c61ab307de86298f0b63612c037cf5334e40ecf4441db",
+      "new_sha256": "57874a479deca97bbfa5c9be66c49e53dedeefaa4e74ec204489f400e0da7158",
+      "bytes": 357495
+    },
+    {
+      "path": "SYSTEM/lib/modules/ansi_cprng.ko",
+      "old_sha256": "88e87025df1b0299d99837adbfc32814ccd64905e6330b9eb9cd0d1538d07c42",
+      "new_sha256": "e2b02f8e14d67dd49b7ebbbeece0de174989b4c317324af3111277e6a11c93a6",
+      "bytes": 7624
+    },
+    {
+      "path": "SYSTEM/lib/modules/evbug.ko",
+      "old_sha256": "7947e8d96b694a02a24d37a70364f92e62b536d9a8f47aa251f1ad49fecd4526",
+      "new_sha256": "2d0de4c1c5acb488471e203004bc1988618c3b40bc3b8dfba3303dade77a4b6f",
+      "bytes": 5356
+    },
+    {
+      "path": "SYSTEM/lib/modules/gpio_axis.ko",
+      "old_sha256": "04794b2036c4d1f18336685627a33f3085d5162d7b77647c933bdc6bd5a43d5e",
+      "new_sha256": "26bfdc2875fca1be0e657581796226624258113d6bbce3140629f88eeab64766",
+      "bytes": 5632
+    },
+    {
+      "path": "SYSTEM/lib/modules/gpio_event.ko",
+      "old_sha256": "8f6edc89ae78768c2cf39f66d74a549038564b7931d82c2c6075915c0c1c0ae5",
+      "new_sha256": "285679fd6b81f53d83978d72ddd01b48a783a771a31dcd8451574128e1c5dbd7",
+      "bytes": 6036
+    },
+    {
+      "path": "SYSTEM/lib/modules/gpio_input.ko",
+      "old_sha256": "c5883eb07065f2a9579180a6257ec0ba6257711c3a4ec6c46c7bfc697574e287",
+      "new_sha256": "498a77589ec4452e97c833ac75f93e49f009c849b298e3049aff6c6d8e7d1ce9",
+      "bytes": 8852
+    },
+    {
+      "path": "SYSTEM/lib/modules/gpio_matrix.ko",
+      "old_sha256": "ac1d9978fb69e061e4126ef8f5b11cbec8986d3ac463c71ebca673995ef1ac34",
+      "new_sha256": "16985409ff9b879d3b7b32adbd2880079ad6524126cd59413fd89c58c78d0b2b",
+      "bytes": 9676
+    },
+    {
+      "path": "SYSTEM/lib/modules/gpio_output.ko",
+      "old_sha256": "072fa17375fdafbaa228db7845a2593aa49de8804060e0b91e5e49160b5ec257",
+      "new_sha256": "d2f62ef7115dfe030d1143c9ee22e77353c72d7cc85f3714136bbc749d80f303",
+      "bytes": 3408
+    },
+    {
+      "path": "SYSTEM/lib/modules/ice40-hcd.ko",
+      "old_sha256": "fb5fa08db93416e348f90dd9c82a8a9fc961ea5bb41178e43a78faf04f3b1147",
+      "new_sha256": "fb38dde9d05fb635a1c46490f49e72f6e381e7cf4ad7d4cb33be941d0e1ff91d",
+      "bytes": 57188
+    },
+    {
+      "path": "SYSTEM/lib/modules/mmc_block_test.ko",
+      "old_sha256": "633f84252a61ecbf1071755c18982dd2678bffac991f9180b271e2836c83a74e",
+      "new_sha256": "bd73cd0f14b10ee3aaf33ad9daab7ddce580e8f3f6eea5815ceada398908b271",
+      "bytes": 44508
+    },
+    {
+      "path": "SYSTEM/lib/modules/mmc_test.ko",
+      "old_sha256": "dd46602568f25065da950f3a3f80b64ab8bf55b747286d77cabc007c8ad0903a",
+      "new_sha256": "6d81f00b8102b76da975414e5421ccc2af3028b45cce0ac14b0ede37b5bb299c",
+      "bytes": 34256
+    },
+    {
+      "path": "SYSTEM/lib/modules/msm-buspm-dev.ko",
+      "old_sha256": "655961899fa907dc9febfe808387b216aa8da2723640fd0ab22a4925a9930aea",
+      "new_sha256": "5a20a39bdb0377712649f118538c5a7909acdb0f0e791ecf50cb772b5566f96b",
+      "bytes": 7500
+    },
+    {
+      "path": "SYSTEM/lib/modules/oprofile.ko",
+      "old_sha256": "4f95abb0109834aeea350abef41c3ea8c03bde49dbab6cfcf872e80e1948cafe",
+      "new_sha256": "afab7e04f7ae9eef000cf701afeb38b38d56d8c83536f58767e6281025d5a3f6",
+      "bytes": 39092
+    },
+    {
+      "path": "SYSTEM/lib/modules/radio-iris-transport.ko",
+      "old_sha256": "638be697b989d45a1b87339ced1cd4f2d9d49ac0852c244414057fa848fcfb9b",
+      "new_sha256": "f8236793e5a4e7565caff4d4d4dce5b152f9728c13f72f2aa2065f9c5d619547",
+      "bytes": 8380
+    },
+    {
+      "path": "SYSTEM/lib/modules/spidev.ko",
+      "old_sha256": "d94e6a39d5a785072066c335458faa7d1f65fa83c2bc3fdb2c6d3208a622d4b1",
+      "new_sha256": "d93fc99086a828166cd64437d02cfece08c4011c75e6835aeb0181ed30c94181",
+      "bytes": 13432
+    },
+    {
+      "path": "SYSTEM/lib/modules/tcp_htcp.ko",
+      "old_sha256": "76d52c91bf65ce5e895872ff1d0b6ed1818368a1b8df14b8cac0d18812b05623",
+      "new_sha256": "6a7b23208cb7f1108527987d55e36c2a5a91935998eb4017637f28b7ebf55a99",
+      "bytes": 6328
+    },
+    {
+      "path": "SYSTEM/lib/modules/tcp_westwood.ko",
+      "old_sha256": "b89ec4bef3b9e112a69ccb6824f9d1a29140149cf755f6f928039e040eb26bf5",
+      "new_sha256": "92f7f3b4ce224ac5f0b4096bc08a3b2c19799a5212e5cc7777198d6290c4df99",
+      "bytes": 5248
+    },
+    {
+      "path": "SYSTEM/lib/modules/test-iosched.ko",
+      "old_sha256": "3d58628e3cf59ecac4a6b00993357b6f605069598d4039649bed33a3498e76f5",
+      "new_sha256": "90bad2f9bb5132479846fe9befd62abb3d1ba4723a4af7ef799152561d473276",
+      "bytes": 20248
+    }
+  ],
+  "unexpected_changes": [],
+  "file_list_preserved": true,
+  "recovery_resource_archive_payloads_and_modes_unchanged": true,
+  "boot_ramdisk_payloads_identical": true,
+  "same_userspace_except_build_metadata_and_matching_kernel_modules": true
+}

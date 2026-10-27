@@ -1,0 +1,23 @@
+{
+  "kernel_commit": "fb17e00f8748",
+  "expected_uname": "3.10.49-gfb17e00f8748",
+  "PR": "https://github.com/ProjectCrystalROM/cyanogenmod_kernel_lge_m1/pull/1",
+  "full_build": "passed",
+  "offline_checks": "passed",
+  "hardware_validation": "pending",
+  "runtime_security_validation": "pending",
+  "baseline_userspace_preserved_except_build_metadata": true,
+  "TWRP_preserved": true,
+  "phone_flashed": false,
+  "SPL_changed": false,
+  "artifacts": {
+    "cm-12.1-20261027-UNOFFICIAL-m1-peridot-cve-2016-5195-test.zip": {
+      "bytes": 414368235,
+      "sha256": "d718b8b9ea26ce0baabf2d2787e51c8ba909e5f6efa9d7c73c431a9af249d5d9"
+    },
+    "boot-cm12.1-ms330-cve-2016-5195-20261027.img": {
+      "bytes": 8802304,
+      "sha256": "6a9bdedfcb9b2fe2a044a5d2e4ad609f6f24a3c7cf44207735c07e0a9085ce64"
+    }
+  }
+}
