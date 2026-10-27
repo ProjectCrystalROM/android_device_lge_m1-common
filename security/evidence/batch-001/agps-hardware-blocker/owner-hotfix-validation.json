@@ -1,0 +1,14 @@
+{
+  "evidence": "owner hardware report",
+  "date": "2026-10-27",
+  "CM12_AGPS_hotfix_camera_photo_capture": "PASS",
+  "CM12_AGPS_hotfix_GPS_Toolbox_location_and_coordinates": "PASS",
+  "previous_framework_crash_blocker_for_these_paths": "resolved",
+  "network": "owner PASS before hotfix",
+  "Bluetooth": "owner PASS before hotfix",
+  "new_video_playback_check": "not reported",
+  "post_hotfix_reboot_persistence": "not reported",
+  "runtime_Dirty_COW_race_test": "not performed",
+  "PRs_merged": false,
+  "CM13_runtime_test": "not performed"
+}
