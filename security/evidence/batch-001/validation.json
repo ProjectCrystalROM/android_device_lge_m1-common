@@ -1,0 +1,119 @@
+{
+  "cve": "CVE-2016-5195",
+  "build_passed": true,
+  "kernel_release": "3.10.49-gfb17e00f8748",
+  "kernel_sha256": "ff68feec0fee8ea403f21f6fe8eded95864c59c0889f9aecb2cb870fc395e054",
+  "kernel_bytes": 7385672,
+  "kernel_commit": "fb17e00f8748c92454ddd53a8a486a8d6f9b14b2",
+  "configuration_options_match_working_rom": true,
+  "compiled_ARM_GUP_contains_COW_force_mask_dirty_bit_and_COW_flag_update": true,
+  "matching_modules": [
+    {
+      "path": "arch/arm/oprofile/oprofile.ko",
+      "sha256": "1796931035e2e61950532545898ba9c4e51f1a47a0dcb3981138ed30e3522b83",
+      "versioned_symbols": 112,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "block/test-iosched.ko",
+      "sha256": "58bfde69c7b85bb597b49f3d9fe4d61b6235bb655bfd4eb35dfd992fe13efc1d",
+      "versioned_symbols": 44,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "crypto/ansi_cprng.ko",
+      "sha256": "14be737309da4254115b6ba31d0f73b48a90c953cb55eac67e16a12956d1c984",
+      "versioned_symbols": 16,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/input/evbug.ko",
+      "sha256": "1d01b0c346a6267d28038d65155a945688e8d29e72419d36ff54d7414f991cb5",
+      "versioned_symbols": 13,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/input/misc/gpio_axis.ko",
+      "sha256": "283ab890cf0b905b9b5d5a73224b267440eaa4899c8240b910de843a48d29d0e",
+      "versioned_symbols": 20,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/input/misc/gpio_event.ko",
+      "sha256": "40b357630de23aff7928fe567b72456682f29cd5c1c24ddf4067a5f329dee2b5",
+      "versioned_symbols": 13,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/input/misc/gpio_input.ko",
+      "sha256": "4ead0984d9ed79047fc7ba374dd502c2b798a14b3d4e863a47e95e94fe9b87bd",
+      "versioned_symbols": 28,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/input/misc/gpio_matrix.ko",
+      "sha256": "9f20603807b5d7adb9f80434aee08279503e9ac20a8defa4e7bad881a38bee6f",
+      "versioned_symbols": 30,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/input/misc/gpio_output.ko",
+      "sha256": "bd71339d1ad4762323306471e4af914f35ac105beeb7a5084ebac754888a0203",
+      "versioned_symbols": 8,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/media/radio/radio-iris-transport.ko",
+      "sha256": "c3907e387bd81130c4b5346efdd90a910af50c7c005111cc4162d96e3df0d5e2",
+      "versioned_symbols": 25,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/mmc/card/mmc_block_test.ko",
+      "sha256": "07a717f5938822a4592b0d9462716e1583175325553f9eb754807b5ad1071b23",
+      "versioned_symbols": 52,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/mmc/card/mmc_test.ko",
+      "sha256": "9bb86214381c6937538cad6d1d2a1fa06ce2928769c3b66e0172c81ae3988a90",
+      "versioned_symbols": 59,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/platform/msm/msm_bus/msm-buspm-dev.ko",
+      "sha256": "b923986ffecdcf13f580a275f3eaf65388b63b945cc54fdc695af0e5b0c9931a",
+      "versioned_symbols": 21,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/spi/spidev.ko",
+      "sha256": "d94b881e24df893cabc19808c057f596cdc19d0242cebab848d0de4aeb199b25",
+      "versioned_symbols": 43,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "drivers/usb/host/ice40-hcd.ko",
+      "sha256": "8a7e7f3cde64f3f62092473232552508556c52ae2352cfab722173bfcae6fd32",
+      "versioned_symbols": 110,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "net/ipv4/tcp_htcp.ko",
+      "sha256": "22d8345de0c44c62c7ce848062e790e5347692ec5d51d247dc7be8ebfb9dc55f",
+      "versioned_symbols": 12,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    },
+    {
+      "path": "net/ipv4/tcp_westwood.ko",
+      "sha256": "87126659c12a4f5f78d9665bb6eb505cbfee1bc596d7b426d3a8762a51a0c2c0",
+      "versioned_symbols": 13,
+      "vermagic": "3.10.49-gfb17e00f8748 SMP preempt mod_unload modversions ARMv7 p2v8 "
+    }
+  ],
+  "runtime_security_validation": "pending",
+  "hardware_regression": "pending",
+  "ROM_packaged": false,
+  "phone_modified": false,
+  "SPL_changed": false
+}

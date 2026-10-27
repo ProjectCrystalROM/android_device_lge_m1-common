@@ -1,0 +1,7 @@
+{
+  "source": "https://raw.githubusercontent.com/gregkh/linux/linux-3.10.y/Makefile",
+  "branch": "linux-3.10.y",
+  "Makefile_header": "VERSION = 3\nPATCHLEVEL = 10\nSUBLEVEL = 108\nEXTRAVERSION =\nNAME = END-OF-LIFE",
+  "target": "3.10.108",
+  "scope": "CM12.1 only; staged future work, no stable-series updates applied"
+}

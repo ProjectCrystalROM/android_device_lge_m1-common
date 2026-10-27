@@ -1,0 +1,16 @@
+{
+  "cve": "CVE-2016-5195",
+  "kernel_base": "add12d0101cfbe639d4bab33ce66e326c2552f11",
+  "fix_commit": "fb17e00f8748c92454ddd53a8a486a8d6f9b14b2",
+  "upstream_stable": "9691eac5593ff1e2f82391ad327f21d90322aec1",
+  "upstream_original": "19be0eaffa3ac7d8eb6784ad9bdbc7d67ed8e619",
+  "upstream_patch_sha256": "888329ba53fbb068f8efe668c16fc92ad6c4090a61c98f17e95bf6b250049891",
+  "semantic_patch_id": "d53f3381d9b2bdfd84c6fc2fc4c9449554d1022e",
+  "matches_upstream_patch_id": true,
+  "selected_config_sha256": "dac779ac61ca0eb00b22a7926c1a036f3a18ff9ce5b12c61f74ce2cfe1d39279",
+  "files_changed": [
+    "include/linux/mm.h",
+    "mm/memory.c"
+  ],
+  "runtime_security_validation": "pending"
+}

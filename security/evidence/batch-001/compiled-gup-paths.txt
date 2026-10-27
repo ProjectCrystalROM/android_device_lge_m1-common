@@ -1,0 +1,466 @@
+00002880 <follow_page_mask>:
+    2880:	e92d4ff7 	push	{r0, r1, r2, r4, r5, r6, r7, r8, r9, sl, fp, lr}
+    2884:	e1a04002 	mov	r4, r2
+    2888:	e5909020 	ldr	r9, [r0, #32]
+    288c:	e3a02000 	mov	r2, #0
+    2890:	e5832000 	str	r2, [r3]
+    2894:	e1a02aa1 	lsr	r2, r1, #21
+    2898:	e1a07000 	mov	r7, r0
+    289c:	e1a06001 	mov	r6, r1
+    28a0:	e5993020 	ldr	r3, [r9, #32]
+    28a4:	e0838182 	add	r8, r3, r2, lsl #3
+    28a8:	e7933182 	ldr	r3, [r3, r2, lsl #3]
+    28ac:	e3530000 	cmp	r3, #0
+    28b0:	0a000089 	beq	2adc <follow_page_mask+0x25c>
+    28b4:	e59fb274 	ldr	fp, [pc, #628]	; 2b30 <follow_page_mask+0x2b0>
+    28b8:	e7e83651 	ubfx	r3, r1, #12, #9
+    28bc:	e1a03103 	lsl	r3, r3, #2
+    28c0:	e58d3004 	str	r3, [sp, #4]
+    28c4:	e5983000 	ldr	r3, [r8]
+    28c8:	e2132002 	ands	r2, r3, #2
+    28cc:	1a000082 	bne	2adc <follow_page_mask+0x25c>
+    28d0:	e3c31eff 	bic	r1, r3, #4080	; 0xff0
+    28d4:	e59b5000 	ldr	r5, [fp]
+    28d8:	e3c1100f 	bic	r1, r1, #15
+    28dc:	e241a481 	sub	sl, r1, #-2130706432	; 0x81000000
+    28e0:	e59f124c 	ldr	r1, [pc, #588]	; 2b34 <follow_page_mask+0x2b4>
+    28e4:	e1a05625 	lsr	r5, r5, #12
+    28e8:	e0653623 	rsb	r3, r5, r3, lsr #12
+    28ec:	e3a05024 	mov	r5, #36	; 0x24
+    28f0:	e5910000 	ldr	r0, [r1]
+    28f4:	e58d2000 	str	r2, [sp]
+    28f8:	e0250395 	mla	r5, r5, r3, r0
+    28fc:	e285501c 	add	r5, r5, #28
+    2900:	e1a00005 	mov	r0, r5
+    2904:	ebfffffe 	bl	0 <_raw_spin_lock>
+			2904: R_ARM_CALL	_raw_spin_lock
+    2908:	e59d3004 	ldr	r3, [sp, #4]
+    290c:	e59d2000 	ldr	r2, [sp]
+    2910:	e79aa003 	ldr	sl, [sl, r3]
+    2914:	e31a0001 	tst	sl, #1
+    2918:	1a00000e 	bne	2958 <follow_page_mask+0xd8>
+    291c:	e3140b01 	tst	r4, #1024	; 0x400
+    2920:	0a000007 	beq	2944 <follow_page_mask+0xc4>
+    2924:	e35a0000 	cmp	sl, #0
+    2928:	0a000005 	beq	2944 <follow_page_mask+0xc4>
+    292c:	e31a0004 	tst	sl, #4
+    2930:	1a000003 	bne	2944 <follow_page_mask+0xc4>
+    2934:	e7e421da 	ubfx	r2, sl, #3, #5
+    2938:	e242201e 	sub	r2, r2, #30
+    293c:	e3520001 	cmp	r2, #1
+    2940:	9a000071 	bls	2b0c <follow_page_mask+0x28c>
+    2944:	e1a00005 	mov	r0, r5
+    2948:	ebfffffe 	bl	0 <_raw_spin_unlock>
+			2948: R_ARM_CALL	_raw_spin_unlock
+    294c:	e35a0000 	cmp	sl, #0
+    2950:	0a000061 	beq	2adc <follow_page_mask+0x25c>
+    2954:	ea00006a 	b	2b04 <follow_page_mask+0x284>
+    2958:	e2148001 	ands	r8, r4, #1
+    295c:	0a000009 	beq	2988 <follow_page_mask+0x108>
+    2960:	e31a0080 	tst	sl, #128	; 0x80
+    2964:	03a02001 	moveq	r2, #1
+    2968:	0a000004 	beq	2980 <follow_page_mask+0x100>
+    296c:	e3041010 	movw	r1, #16400	; 0x4010
+    2970:	e0041001 	and	r1, r4, r1
+    2974:	e3040010 	movw	r0, #16400	; 0x4010
+    2978:	e1510000 	cmp	r1, r0
+    297c:	07e0235a 	ubfxeq	r2, sl, #6, #1
+    2980:	e2122001 	ands	r2, r2, #1
+    2984:	0a00004c 	beq	2abc <follow_page_mask+0x23c>
+    2988:	e1a01006 	mov	r1, r6
+    298c:	e1a00007 	mov	r0, r7
+    2990:	e1a0200a 	mov	r2, sl
+    2994:	ebfffffe 	bl	10b0 <vm_normal_page>
+			2994: R_ARM_CALL	vm_normal_page
+    2998:	e2506000 	subs	r6, r0, #0
+    299c:	1a00000d 	bne	29d8 <follow_page_mask+0x158>
+    29a0:	e3140008 	tst	r4, #8
+    29a4:	1a000049 	bne	2ad0 <follow_page_mask+0x250>
+    29a8:	e59f1188 	ldr	r1, [pc, #392]	; 2b38 <follow_page_mask+0x2b8>
+    29ac:	e1a0262a 	lsr	r2, sl, #12
+    29b0:	e5911004 	ldr	r1, [r1, #4]
+    29b4:	e1520001 	cmp	r2, r1
+    29b8:	1a000044 	bne	2ad0 <follow_page_mask+0x250>
+    29bc:	e59f116c 	ldr	r1, [pc, #364]	; 2b30 <follow_page_mask+0x2b0>
+    29c0:	e5916000 	ldr	r6, [r1]
+    29c4:	e59f1168 	ldr	r1, [pc, #360]	; 2b34 <follow_page_mask+0x2b4>
+    29c8:	e0422626 	sub	r2, r2, r6, lsr #12
+    29cc:	e3a06024 	mov	r6, #36	; 0x24
+    29d0:	e5911000 	ldr	r1, [r1]
+    29d4:	e0261296 	mla	r6, r6, r2, r1
+    29d8:	e3140004 	tst	r4, #4
+    29dc:	0a000016 	beq	2a3c <follow_page_mask+0x1bc>
+    29e0:	e5962000 	ldr	r2, [r6]
+    29e4:	e3120902 	tst	r2, #32768	; 0x8000
+    29e8:	0a00000d 	beq	2a24 <follow_page_mask+0x1a4>
+    29ec:	e596201c 	ldr	r2, [r6, #28]
+    29f0:	e2821010 	add	r1, r2, #16
+    29f4:	e1910f9f 	ldrex	r0, [r1]
+    29f8:	e2800001 	add	r0, r0, #1
+    29fc:	e181cf90 	strex	ip, r0, [r1]
+    2a00:	e33c0000 	teq	ip, #0
+    2a04:	1afffffa 	bne	29f4 <follow_page_mask+0x174>
+    2a08:	e286200c 	add	r2, r6, #12
+    2a0c:	e1921f9f 	ldrex	r1, [r2]
+    2a10:	e2811001 	add	r1, r1, #1
+    2a14:	e1820f91 	strex	r0, r1, [r2]
+    2a18:	e3300000 	teq	r0, #0
+    2a1c:	1afffffa 	bne	2a0c <follow_page_mask+0x18c>
+    2a20:	ea000005 	b	2a3c <follow_page_mask+0x1bc>
+    2a24:	e2862010 	add	r2, r6, #16
+    2a28:	e1921f9f 	ldrex	r1, [r2]
+    2a2c:	e2811001 	add	r1, r1, #1
+    2a30:	e1820f91 	strex	r0, r1, [r2]
+    2a34:	e3300000 	teq	r0, #0
+    2a38:	1afffffa 	bne	2a28 <follow_page_mask+0x1a8>
+    2a3c:	e3140002 	tst	r4, #2
+    2a40:	0a00000a 	beq	2a70 <follow_page_mask+0x1f0>
+    2a44:	e3580000 	cmp	r8, #0
+    2a48:	0a000006 	beq	2a68 <follow_page_mask+0x1e8>
+    2a4c:	e31a0040 	tst	sl, #64	; 0x40
+    2a50:	1a000004 	bne	2a68 <follow_page_mask+0x1e8>
+    2a54:	e5963000 	ldr	r3, [r6]
+    2a58:	e3130010 	tst	r3, #16
+    2a5c:	1a000001 	bne	2a68 <follow_page_mask+0x1e8>
+    2a60:	e1a00006 	mov	r0, r6
+    2a64:	ebfffffe 	bl	0 <set_page_dirty>
+			2a64: R_ARM_CALL	set_page_dirty
+    2a68:	e1a00006 	mov	r0, r6
+    2a6c:	ebfffffe 	bl	0 <mark_page_accessed>
+			2a6c: R_ARM_CALL	mark_page_accessed
+    2a70:	e3140040 	tst	r4, #64	; 0x40
+    2a74:	0a000011 	beq	2ac0 <follow_page_mask+0x240>
+    2a78:	e5973028 	ldr	r3, [r7, #40]	; 0x28
+    2a7c:	e3130a02 	tst	r3, #8192	; 0x2000
+    2a80:	0a00000e 	beq	2ac0 <follow_page_mask+0x240>
+    2a84:	e5963004 	ldr	r3, [r6, #4]
+    2a88:	e3530000 	cmp	r3, #0
+    2a8c:	0a00000b 	beq	2ac0 <follow_page_mask+0x240>
+    2a90:	e3a00000 	mov	r0, #0
+    2a94:	e1a01006 	mov	r1, r6
+    2a98:	ebfffffe 	bl	0 <_test_and_set_bit>
+			2a98: R_ARM_CALL	_test_and_set_bit
+    2a9c:	e3500000 	cmp	r0, #0
+    2aa0:	1a000006 	bne	2ac0 <follow_page_mask+0x240>
+    2aa4:	ebfffffe 	bl	0 <lru_add_drain>
+			2aa4: R_ARM_CALL	lru_add_drain
+    2aa8:	e1a00006 	mov	r0, r6
+    2aac:	ebfffffe 	bl	0 <mlock_vma_page>
+			2aac: R_ARM_CALL	mlock_vma_page
+    2ab0:	e1a00006 	mov	r0, r6
+    2ab4:	ebfffffe 	bl	0 <unlock_page>
+			2ab4: R_ARM_CALL	unlock_page
+    2ab8:	ea000000 	b	2ac0 <follow_page_mask+0x240>
+    2abc:	e1a06002 	mov	r6, r2
+    2ac0:	e1a00005 	mov	r0, r5
+    2ac4:	ebfffffe 	bl	0 <_raw_spin_unlock>
+			2ac4: R_ARM_CALL	_raw_spin_unlock
+    2ac8:	e1a00006 	mov	r0, r6
+    2acc:	ea000015 	b	2b28 <follow_page_mask+0x2a8>
+    2ad0:	e1a00005 	mov	r0, r5
+    2ad4:	ebfffffe 	bl	0 <_raw_spin_unlock>
+			2ad4: R_ARM_CALL	_raw_spin_unlock
+    2ad8:	ea000004 	b	2af0 <follow_page_mask+0x270>
+    2adc:	e2140008 	ands	r0, r4, #8
+    2ae0:	0a000010 	beq	2b28 <follow_page_mask+0x2a8>
+    2ae4:	e5973048 	ldr	r3, [r7, #72]	; 0x48
+    2ae8:	e3530000 	cmp	r3, #0
+    2aec:	1a000001 	bne	2af8 <follow_page_mask+0x278>
+    2af0:	e3e0000d 	mvn	r0, #13
+    2af4:	ea00000b 	b	2b28 <follow_page_mask+0x2a8>
+    2af8:	e5933008 	ldr	r3, [r3, #8]
+    2afc:	e3530000 	cmp	r3, #0
+    2b00:	0afffffa 	beq	2af0 <follow_page_mask+0x270>
+    2b04:	e3a00000 	mov	r0, #0
+    2b08:	ea000006 	b	2b28 <follow_page_mask+0x2a8>
+    2b0c:	e1a00005 	mov	r0, r5
+    2b10:	ebfffffe 	bl	0 <_raw_spin_unlock>
+			2b10: R_ARM_CALL	_raw_spin_unlock
+    2b14:	e1a00009 	mov	r0, r9
+    2b18:	e1a01008 	mov	r1, r8
+    2b1c:	e1a02006 	mov	r2, r6
+    2b20:	ebfffffe 	bl	0 <migration_entry_wait>
+			2b20: R_ARM_CALL	migration_entry_wait
+    2b24:	eaffff66 	b	28c4 <follow_page_mask+0x44>
+    2b28:	e28dd00c 	add	sp, sp, #12
+    2b2c:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+	...
+			2b30: R_ARM_ABS32	__pv_phys_offset
+			2b34: R_ARM_ABS32	.bss
+			2b38: R_ARM_ABS32	.data..read_mostly
+
+
+000038fc <__get_user_pages.part.85>:
+    38fc:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, sl, fp, lr}
+    3900:	e24dd01c 	sub	sp, sp, #28
+    3904:	e1a05002 	mov	r5, r2
+    3908:	e1a08000 	mov	r8, r0
+    390c:	e59d7040 	ldr	r7, [sp, #64]	; 0x40
+    3910:	e1a09001 	mov	r9, r1
+    3914:	e58d3008 	str	r3, [sp, #8]
+    3918:	e3a04000 	mov	r4, #0
+    391c:	e3170001 	tst	r7, #1
+    3920:	e2072010 	and	r2, r7, #16
+    3924:	03a03011 	moveq	r3, #17
+    3928:	13a03022 	movne	r3, #34	; 0x22
+    392c:	e3520000 	cmp	r2, #0
+    3930:	03877c02 	orreq	r7, r7, #512	; 0x200
+    3934:	03a02003 	moveq	r2, #3
+    3938:	13a02030 	movne	r2, #48	; 0x30
+    393c:	e0022003 	and	r2, r2, r3
+    3940:	e58d200c 	str	r2, [sp, #12]
+    3944:	e1a0200d 	mov	r2, sp
+    3948:	e3c2bd7f 	bic	fp, r2, #8128	; 0x1fc0
+    394c:	e3cbb03f 	bic	fp, fp, #63	; 0x3f
+    3950:	e1a00009 	mov	r0, r9
+    3954:	e1a01005 	mov	r1, r5
+    3958:	ebfffffe 	bl	0 <find_extend_vma>
+			3958: R_ARM_CALL	find_extend_vma
+    395c:	e2506000 	subs	r6, r0, #0
+    3960:	1a000046 	bne	3a80 <__get_user_pages.part.85+0x184>
+    3964:	e1a00009 	mov	r0, r9
+    3968:	e1a01005 	mov	r1, r5
+    396c:	ebfffffe 	bl	0 <in_gate_area>
+			396c: R_ARM_CALL	in_gate_area
+    3970:	e3500000 	cmp	r0, #0
+    3974:	0a000047 	beq	3a98 <__get_user_pages.part.85+0x19c>
+    3978:	e3170001 	tst	r7, #1
+    397c:	e3c5ceff 	bic	ip, r5, #4080	; 0xff0
+    3980:	e3ccc00f 	bic	ip, ip, #15
+    3984:	1a000043 	bne	3a98 <__get_user_pages.part.85+0x19c>
+    3988:	e35c04bf 	cmp	ip, #-1090519040	; 0xbf000000
+    398c:	e1a03aac 	lsr	r3, ip, #21
+    3990:	859f2328 	ldrhi	r2, [pc, #808]	; 3cc0 <__get_user_pages.part.85+0x3c4>
+    3994:	95992020 	ldrls	r2, [r9, #32]
+    3998:	85922020 	ldrhi	r2, [r2, #32]
+    399c:	e0823183 	add	r3, r2, r3, lsl #3
+    39a0:	e5933000 	ldr	r3, [r3]
+    39a4:	e3530000 	cmp	r3, #0
+    39a8:	0a00003a 	beq	3a98 <__get_user_pages.part.85+0x19c>
+    39ac:	e7e8c65c 	ubfx	ip, ip, #12, #9
+    39b0:	e3c33eff 	bic	r3, r3, #4080	; 0xff0
+    39b4:	e3c3300f 	bic	r3, r3, #15
+    39b8:	e2433481 	sub	r3, r3, #-2130706432	; 0x81000000
+    39bc:	e793210c 	ldr	r2, [r3, ip, lsl #2]
+    39c0:	e3520000 	cmp	r2, #0
+    39c4:	0a000033 	beq	3a98 <__get_user_pages.part.85+0x19c>
+    39c8:	e1a00009 	mov	r0, r9
+    39cc:	e88d1008 	stm	sp, {r3, ip}
+    39d0:	ebfffffe 	bl	0 <get_gate_vma>
+			39d0: R_ARM_CALL	get_gate_vma
+    39d4:	e59d2044 	ldr	r2, [sp, #68]	; 0x44
+    39d8:	e89d1008 	ldm	sp, {r3, ip}
+    39dc:	e3520000 	cmp	r2, #0
+    39e0:	e1a06000 	mov	r6, r0
+    39e4:	0a000066 	beq	3b84 <__get_user_pages.part.85+0x288>
+    39e8:	e793210c 	ldr	r2, [r3, ip, lsl #2]
+    39ec:	e1a01005 	mov	r1, r5
+    39f0:	ebfffffe 	bl	10b0 <vm_normal_page>
+			39f0: R_ARM_CALL	vm_normal_page
+    39f4:	e89d1008 	ldm	sp, {r3, ip}
+    39f8:	e250a000 	subs	sl, r0, #0
+    39fc:	1a00000e 	bne	3a3c <__get_user_pages.part.85+0x140>
+    3a00:	e3170008 	tst	r7, #8
+    3a04:	1a000023 	bne	3a98 <__get_user_pages.part.85+0x19c>
+    3a08:	e793210c 	ldr	r2, [r3, ip, lsl #2]
+    3a0c:	e59f32b0 	ldr	r3, [pc, #688]	; 3cc4 <__get_user_pages.part.85+0x3c8>
+    3a10:	e1a02622 	lsr	r2, r2, #12
+    3a14:	e5933004 	ldr	r3, [r3, #4]
+    3a18:	e1520003 	cmp	r2, r3
+    3a1c:	1a00001d 	bne	3a98 <__get_user_pages.part.85+0x19c>
+    3a20:	e59f32a0 	ldr	r3, [pc, #672]	; 3cc8 <__get_user_pages.part.85+0x3cc>
+    3a24:	e3a01024 	mov	r1, #36	; 0x24
+    3a28:	e5933000 	ldr	r3, [r3]
+    3a2c:	e0422623 	sub	r2, r2, r3, lsr #12
+    3a30:	e59f3294 	ldr	r3, [pc, #660]	; 3ccc <__get_user_pages.part.85+0x3d0>
+    3a34:	e5933000 	ldr	r3, [r3]
+    3a38:	e02a3291 	mla	sl, r1, r2, r3
+    3a3c:	e59d3044 	ldr	r3, [sp, #68]	; 0x44
+    3a40:	e783a104 	str	sl, [r3, r4, lsl #2]
+    3a44:	e59a3000 	ldr	r3, [sl]
+    3a48:	e3130902 	tst	r3, #32768	; 0x8000
+    3a4c:	1a000006 	bne	3a6c <__get_user_pages.part.85+0x170>
+    3a50:	e28a3010 	add	r3, sl, #16
+    3a54:	e1931f9f 	ldrex	r1, [r3]
+    3a58:	e2811001 	add	r1, r1, #1
+    3a5c:	e1830f91 	strex	r0, r1, [r3]
+    3a60:	e3300000 	teq	r0, #0
+    3a64:	1afffffa 	bne	3a54 <__get_user_pages.part.85+0x158>
+    3a68:	ea000045 	b	3b84 <__get_user_pages.part.85+0x288>
+    3a6c:	e1a0000a 	mov	r0, sl
+    3a70:	ebfffffe 	bl	0 <__get_page_tail>
+			3a70: R_ARM_CALL	__get_page_tail
+    3a74:	e3500000 	cmp	r0, #0
+    3a78:	1a000041 	bne	3b84 <__get_user_pages.part.85+0x288>
+    3a7c:	eafffff3 	b	3a50 <__get_user_pages.part.85+0x154>
+    3a80:	e5963028 	ldr	r3, [r6, #40]	; 0x28
+    3a84:	e3130b11 	tst	r3, #17408	; 0x4400
+    3a88:	1a000002 	bne	3a98 <__get_user_pages.part.85+0x19c>
+    3a8c:	e59d200c 	ldr	r2, [sp, #12]
+    3a90:	e1120003 	tst	r2, r3
+    3a94:	1a00004f 	bne	3bd8 <__get_user_pages.part.85+0x2dc>
+    3a98:	e3540000 	cmp	r4, #0
+    3a9c:	1a00005b 	bne	3c10 <__get_user_pages.part.85+0x314>
+    3aa0:	e3e0000d 	mvn	r0, #13
+    3aa4:	ea000083 	b	3cb8 <__get_user_pages.part.85+0x3bc>
+    3aa8:	e31a0040 	tst	sl, #64	; 0x40
+    3aac:	1a00005c 	bne	3c24 <__get_user_pages.part.85+0x328>
+    3ab0:	e59d204c 	ldr	r2, [sp, #76]	; 0x4c
+    3ab4:	e20a3001 	and	r3, sl, #1
+    3ab8:	e1a00009 	mov	r0, r9
+    3abc:	e1a01006 	mov	r1, r6
+    3ac0:	e3520000 	cmp	r2, #0
+    3ac4:	e1a02005 	mov	r2, r5
+    3ac8:	13833008 	orrne	r3, r3, #8
+    3acc:	e31a0020 	tst	sl, #32
+    3ad0:	13833018 	orrne	r3, r3, #24
+    3ad4:	ebfffffe 	bl	3800 <handle_mm_fault>
+			3ad4: R_ARM_CALL	handle_mm_fault
+    3ad8:	e3100033 	tst	r0, #51	; 0x33
+    3adc:	1a000060 	bne	3c64 <__get_user_pages.part.85+0x368>
+    3ae0:	e3580000 	cmp	r8, #0
+    3ae4:	0a000006 	beq	3b04 <__get_user_pages.part.85+0x208>
+    3ae8:	e3100004 	tst	r0, #4
+    3aec:	1598322c 	ldrne	r3, [r8, #556]	; 0x22c
+    3af0:	05983228 	ldreq	r3, [r8, #552]	; 0x228
+    3af4:	12833001 	addne	r3, r3, #1
+    3af8:	02833001 	addeq	r3, r3, #1
+    3afc:	1588322c 	strne	r3, [r8, #556]	; 0x22c
+    3b00:	05883228 	streq	r3, [r8, #552]	; 0x228
+    3b04:	e3100b01 	tst	r0, #1024	; 0x400
+    3b08:	1a00003b 	bne	3bfc <__get_user_pages.part.85+0x300>
+    3b0c:	e3100008 	tst	r0, #8
+    3b10:	0a000002 	beq	3b20 <__get_user_pages.part.85+0x224>
+    3b14:	e5963028 	ldr	r3, [r6, #40]	; 0x28
+    3b18:	e3130002 	tst	r3, #2
+    3b1c:	038aa901 	orreq	sl, sl, #16384	; 0x4000
+    3b20:	ebfffffe 	bl	0 <_cond_resched>
+			3b20: R_ARM_CALL	_cond_resched
+    3b24:	e28d3014 	add	r3, sp, #20
+    3b28:	e1a00006 	mov	r0, r6
+    3b2c:	e1a01005 	mov	r1, r5
+    3b30:	e1a0200a 	mov	r2, sl
+    3b34:	ebfffffe 	bl	2880 <follow_page_mask>
+			3b34: R_ARM_CALL	follow_page_mask
+    3b38:	e2503000 	subs	r3, r0, #0
+    3b3c:	0affffd9 	beq	3aa8 <__get_user_pages.part.85+0x1ac>
+    3b40:	e3730a01 	cmn	r3, #4096	; 0x1000
+    3b44:	8a000058 	bhi	3cac <__get_user_pages.part.85+0x3b0>
+    3b48:	e59d2044 	ldr	r2, [sp, #68]	; 0x44
+    3b4c:	e3520000 	cmp	r2, #0
+    3b50:	0a00000d 	beq	3b8c <__get_user_pages.part.85+0x290>
+    3b54:	e7823104 	str	r3, [r2, r4, lsl #2]
+    3b58:	e5932004 	ldr	r2, [r3, #4]
+    3b5c:	e3120001 	tst	r2, #1
+    3b60:	0a000005 	beq	3b7c <__get_user_pages.part.85+0x280>
+    3b64:	e1a01003 	mov	r1, r3
+    3b68:	e1a00006 	mov	r0, r6
+    3b6c:	e1a02005 	mov	r2, r5
+    3b70:	e58d3000 	str	r3, [sp]
+    3b74:	ebfffffe 	bl	0 <__flush_anon_page>
+			3b74: R_ARM_CALL	__flush_anon_page
+    3b78:	e59d3000 	ldr	r3, [sp]
+    3b7c:	e1a00003 	mov	r0, r3
+    3b80:	ebfffffe 	bl	0 <flush_dcache_page>
+			3b80: R_ARM_CALL	flush_dcache_page
+    3b84:	e3a03000 	mov	r3, #0
+    3b88:	e58d3014 	str	r3, [sp, #20]
+    3b8c:	e59d3048 	ldr	r3, [sp, #72]	; 0x48
+    3b90:	e59d2008 	ldr	r2, [sp, #8]
+    3b94:	e3530000 	cmp	r3, #0
+    3b98:	17836104 	strne	r6, [r3, r4, lsl #2]
+    3b9c:	13a03000 	movne	r3, #0
+    3ba0:	158d3014 	strne	r3, [sp, #20]
+    3ba4:	e59d3014 	ldr	r3, [sp, #20]
+    3ba8:	e1c33625 	bic	r3, r3, r5, lsr #12
+    3bac:	e2833001 	add	r3, r3, #1
+    3bb0:	e1530002 	cmp	r3, r2
+    3bb4:	21a03002 	movcs	r3, r2
+    3bb8:	e0522003 	subs	r2, r2, r3
+    3bbc:	e0834004 	add	r4, r3, r4
+    3bc0:	e58d2008 	str	r2, [sp, #8]
+    3bc4:	0a000011 	beq	3c10 <__get_user_pages.part.85+0x314>
+    3bc8:	e0855603 	add	r5, r5, r3, lsl #12
+    3bcc:	e5963004 	ldr	r3, [r6, #4]
+    3bd0:	e1550003 	cmp	r5, r3
+    3bd4:	2affff5d 	bcs	3950 <__get_user_pages.part.85+0x54>
+    3bd8:	e59b300c 	ldr	r3, [fp, #12]
+    3bdc:	e5932004 	ldr	r2, [r3, #4]
+    3be0:	e5922000 	ldr	r2, [r2]
+    3be4:	e3120001 	tst	r2, #1
+    3be8:	0a00000a 	beq	3c18 <__get_user_pages.part.85+0x31c>
+    3bec:	e593333c 	ldr	r3, [r3, #828]	; 0x33c
+    3bf0:	e3130c01 	tst	r3, #256	; 0x100
+    3bf4:	0a000007 	beq	3c18 <__get_user_pages.part.85+0x31c>
+    3bf8:	ea00002a 	b	3ca8 <__get_user_pages.part.85+0x3ac>
+    3bfc:	e59d304c 	ldr	r3, [sp, #76]	; 0x4c
+    3c00:	e3530000 	cmp	r3, #0
+    3c04:	159d204c 	ldrne	r2, [sp, #76]	; 0x4c
+    3c08:	13a03000 	movne	r3, #0
+    3c0c:	15823000 	strne	r3, [r2]
+    3c10:	e1a00004 	mov	r0, r4
+    3c14:	ea000027 	b	3cb8 <__get_user_pages.part.85+0x3bc>
+    3c18:	ebfffffe 	bl	0 <_cond_resched>
+			3c18: R_ARM_CALL	_cond_resched
+    3c1c:	e1a0a007 	mov	sl, r7
+    3c20:	eaffffbf 	b	3b24 <__get_user_pages.part.85+0x228>
+    3c24:	e5963028 	ldr	r3, [r6, #40]	; 0x28
+    3c28:	e3130c01 	tst	r3, #256	; 0x100
+    3c2c:	0affff9f 	beq	3ab0 <__get_user_pages.part.85+0x1b4>
+    3c30:	e5963000 	ldr	r3, [r6]
+    3c34:	e1530005 	cmp	r3, r5
+    3c38:	1affff9c 	bne	3ab0 <__get_user_pages.part.85+0x1b4>
+    3c3c:	e596300c 	ldr	r3, [r6, #12]
+    3c40:	e3530000 	cmp	r3, #0
+    3c44:	0affffd0 	beq	3b8c <__get_user_pages.part.85+0x290>
+    3c48:	e5932004 	ldr	r2, [r3, #4]
+    3c4c:	e1520005 	cmp	r2, r5
+    3c50:	1affffcd 	bne	3b8c <__get_user_pages.part.85+0x290>
+    3c54:	e5933028 	ldr	r3, [r3, #40]	; 0x28
+    3c58:	e3130c01 	tst	r3, #256	; 0x100
+    3c5c:	0affffca 	beq	3b8c <__get_user_pages.part.85+0x290>
+    3c60:	eaffff92 	b	3ab0 <__get_user_pages.part.85+0x1b4>
+    3c64:	e3100001 	tst	r0, #1
+    3c68:	0a000003 	beq	3c7c <__get_user_pages.part.85+0x380>
+    3c6c:	e3540000 	cmp	r4, #0
+    3c70:	11a00004 	movne	r0, r4
+    3c74:	03e0000b 	mvneq	r0, #11
+    3c78:	ea00000e 	b	3cb8 <__get_user_pages.part.85+0x3bc>
+    3c7c:	e3100030 	tst	r0, #48	; 0x30
+    3c80:	0a000005 	beq	3c9c <__get_user_pages.part.85+0x3a0>
+    3c84:	e3540000 	cmp	r4, #0
+    3c88:	1affffe0 	bne	3c10 <__get_user_pages.part.85+0x314>
+    3c8c:	e3170c01 	tst	r7, #256	; 0x100
+    3c90:	03e0000d 	mvneq	r0, #13
+    3c94:	13e00084 	mvnne	r0, #132	; 0x84
+    3c98:	ea000006 	b	3cb8 <__get_user_pages.part.85+0x3bc>
+    3c9c:	e3100002 	tst	r0, #2
+    3ca0:	1affff7c 	bne	3a98 <__get_user_pages.part.85+0x19c>
+    3ca4:	e7f001f2 	.word	0xe7f001f2
+    3ca8:	e59f3020 	ldr	r3, [pc, #32]	; 3cd0 <__get_user_pages.part.85+0x3d4>
+    3cac:	e3540000 	cmp	r4, #0
+    3cb0:	11a00004 	movne	r0, r4
+    3cb4:	01a00003 	moveq	r0, r3
+    3cb8:	e28dd01c 	add	sp, sp, #28
+    3cbc:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+	...
+			3cc0: R_ARM_ABS32	init_mm
+			3cc4: R_ARM_ABS32	.data..read_mostly
+			3cc8: R_ARM_ABS32	__pv_phys_offset
+			3ccc: R_ARM_ABS32	.bss
+    3cd0:	fffffe00 	.word	0xfffffe00
+
+
+00003cd4 <__get_user_pages>:
+    3cd4:	e253c000 	subs	ip, r3, #0
+    3cd8:	e92d40f0 	push	{r4, r5, r6, r7, lr}
+    3cdc:	e59d7014 	ldr	r7, [sp, #20]
+    3ce0:	e59d6018 	ldr	r6, [sp, #24]
+    3ce4:	e59d501c 	ldr	r5, [sp, #28]
+    3ce8:	e59d4020 	ldr	r4, [sp, #32]
+    3cec:	0a000001 	beq	3cf8 <__get_user_pages+0x24>
+    3cf0:	e8bd40f0 	pop	{r4, r5, r6, r7, lr}
+    3cf4:	eaffff00 	b	38fc <__get_user_pages.part.85>
+    3cf8:	e1a0000c 	mov	r0, ip
+    3cfc:	e8bd80f0 	pop	{r4, r5, r6, r7, pc}
+

@@ -1,0 +1,16 @@
+{
+  "selected_config_options_unchanged": true,
+  "baseline_config_sha256": "dac779ac61ca0eb00b22a7926c1a036f3a18ff9ce5b12c61f74ce2cfe1d39279",
+  "built_config_sha256": "dac779ac61ca0eb00b22a7926c1a036f3a18ff9ce5b12c61f74ce2cfe1d39279",
+  "ARM_LPAE": false,
+  "transparent_hugepages_enabled": false,
+  "architecture_evidence": [
+    "arch/arm/Kconfig:1807 HAVE_ARCH_TRANSPARENT_HUGEPAGE depends on ARM_LPAE",
+    "mm/Kconfig:385 TRANSPARENT_HUGEPAGE depends on HAVE_ARCH_TRANSPARENT_HUGEPAGE",
+    "arch/arm/include/asm/pgtable.h:234 implements pte_dirty"
+  ],
+  "upstream_patch_semantics_identical": true,
+  "security_runtime_validation": "pending",
+  "hardware_regression": "pending",
+  "SPL_changed": false
+}
