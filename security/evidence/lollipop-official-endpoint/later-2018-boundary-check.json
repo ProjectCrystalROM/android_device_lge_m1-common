@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://source.android.com/docs/security/bulletin/2018-04-01",
+    "sha256": "9477c96553d8f2e8c6b9d10eb2652dd69070284fa39a62a1d05bc00f95368f1c",
+    "cve_rows": 311,
+    "explicit_5_1_1_rows": []
+  },
+  {
+    "url": "https://source.android.com/docs/security/bulletin/2018-05-01",
+    "sha256": "d5ced98664383ca6953bcb847090f19fa693acbe7cc002dd2e54b7bba4635e18",
+    "cve_rows": 22,
+    "explicit_5_1_1_rows": []
+  },
+  {
+    "url": "https://source.android.com/docs/security/bulletin/2018-06-01",
+    "sha256": "6d8a498dd896f8b4effc6136fc81d21fffd575b84b6b254c663f4dfcc1dd4f9b",
+    "cve_rows": 60,
+    "explicit_5_1_1_rows": []
+  },
+  {
+    "url": "https://source.android.com/docs/security/bulletin/2018-07-01",
+    "sha256": "6704a09d286488aa452ea352f65260d7a31a1bc7117495ce46db726b8dbe58dc",
+    "cve_rows": 41,
+    "explicit_5_1_1_rows": []
+  },
+  {
+    "url": "https://source.android.com/docs/security/bulletin/2018-08-01",
+    "sha256": "5724b47a22fa8d8263a777167fa0e42796fe0aa8d69ef905053aa731946a2cd5",
+    "cve_rows": 43,
+    "explicit_5_1_1_rows": []
+  },
+  {
+    "url": "https://source.android.com/docs/security/bulletin/2018-09-01",
+    "sha256": "da1e0278041f9e2a988301f592320df8c12f5993b5f82fc4e9171215a74fd700",
+    "cve_rows": 57,
+    "explicit_5_1_1_rows": []
+  },
+  {
+    "url": "https://source.android.com/docs/security/bulletin/2018-10-01",
+    "sha256": "5aeb684ae0eea74120833c10a2e5d2741705fcfee9209488584b4df0a9859e2f",
+    "cve_rows": 26,
+    "explicit_5_1_1_rows": []
+  },
+  {
+    "url": "https://source.android.com/docs/security/bulletin/2018-11-01",
+    "sha256": "7a4b12a9319c8a62e277d15089948ef9713b04f5e4083172f544fbdd6122d2bd",
+    "cve_rows": 33,
+    "explicit_5_1_1_rows": []
+  },
+  {
+    "url": "https://source.android.com/docs/security/bulletin/2018-12-01",
+    "sha256": "d59cd825cb8d83dfdedd1b69e703b03c1604305532775c94211d21ee8d864c4f",
+    "cve_rows": 53,
+    "explicit_5_1_1_rows": []
+  }
+]

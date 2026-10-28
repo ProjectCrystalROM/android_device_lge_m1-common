@@ -1,0 +1,3456 @@
+[
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6700",
+      "A-30916186",
+      "Critical",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1",
+      "Aug 17, 2016"
+    ],
+    "links": [],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in libzipfile"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6702",
+      "A-30259087",
+      "High",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1",
+      "Jul 19, 2016"
+    ],
+    "links": [],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in libjpeg"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6703",
+      "A-30765246",
+      "High",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1",
+      "Google internal"
+    ],
+    "links": [],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Android runtime"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6704",
+      "A-30229821 [2] [3]",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Jul 19, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/c6c446f9e022adf20064e65a17574804f8af8e7d",
+      "https://android.googlesource.com/platform/hardware/qcom/audio/+/9cb9810ecb63c8ff55ecf4bc77431dc5b0688b5f",
+      "https://android.googlesource.com/platform/system/media/+/a6274f03b4dfe1c3a22af51e3a17ea56a314e747"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Mediaserver"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6705",
+      "A-30907212 [2]",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Aug 16, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/3a03fa24d21f97e84e796ac5ef14b3f434c0e8f1",
+      "https://android.googlesource.com/platform/frameworks/av/+/bd04b47d38a89f1dada1c6da2ef4a3d235c166b8"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Mediaserver"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6710",
+      "A-30537115 [2]",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Jul 30, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/9fab683c9598d234dd8461335c276ed3e37c91e8",
+      "https://android.googlesource.com/platform/packages/providers/DownloadProvider/+/243e62949f7208d3b82eda3ee4ec22d3dbc1fb19"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in download manager"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2014-9908",
+      "A-28672558",
+      "High",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1",
+      "May 5, 2014"
+    ],
+    "links": [],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Bluetooth"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6711",
+      "A-30593765",
+      "High",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1",
+      "Aug 1, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libvpx/+/063be1485e0099bc81ace3a08b0ec9186dcad693"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Mediaserver"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6712",
+      "A-30593752",
+      "High",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1",
+      "Aug 1, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libvpx/+/fdb1b40e7bb147c07bda988c9501ad223795d12d"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Mediaserver"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6715",
+      "A-29833954",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Jun 28, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/3de09838fb0996bb4b420630800ad34e828fd1b6"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Framework APIs"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6717",
+      "A-31350239",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Sep 7, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/45d9bbabbe7920bf4e0a68074b97d8260aef2e07"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Mediaserver"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6719",
+      "A-29043989 [2]",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Google internal"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/apps/Bluetooth/+/e1b6db10e913c09d0b695368336137f6aabee462",
+      "https://android.googlesource.com/platform/frameworks/base/+/b1dc1757071ba46ee653d68f331486e86778b8e4"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Bluetooth"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6720",
+      "A-29422020 [2] [3] [4]",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Jun 15, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/0f177948ae2640bfe4d70f8e4248e106406b3b0a",
+      "https://android.googlesource.com/platform/frameworks/av/+/2c75e1c3b98e4e94f50c63e2b7694be5f948477c",
+      "https://android.googlesource.com/platform/frameworks/av/+/7c88b498fda1c2b608a9dd73960a2fd4d7b7e3f7",
+      "https://android.googlesource.com/platform/frameworks/av/+/640b04121d7cd2cac90e2f7c82b97fce05f074a5"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Mediaserver"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6722",
+      "A-31091777",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Aug 23, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/89c03b3b9ff74a507a8b8334c50b08b334483556"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Mediaserver"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6723",
+      "A-30100884 [2]",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Jul 11, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/d5b0d0b1df2e1a7943a4bb2034fd21487edd0264",
+      "https://android.googlesource.com/platform/frameworks/base/+/31f351160cdfd9dbe9919682ebe41bde3bcf91c6"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Proxy Auto Config"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6724",
+      "A-30568284",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Google internal"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/7625010a2d22f8c3f1aeae2ef88dde37cbebd0bf"
+    ],
+    "group": "2016-11-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Input Manager Service"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-0718",
+      "A-28698301",
+      "High",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1",
+      "May 10, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/expat/+/52ac633b73856ded34b33bd4adb4ab793bbbe963"
+    ],
+    "group": "2016-11-05 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Expat"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2012-6702",
+      "A-29149404",
+      "Moderate",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1",
+      "Mar 06, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/expat/+/a11ff32280a863bff93df13ad643912ad9bf1302"
+    ],
+    "group": "2016-11-05 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Expat"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-5300",
+      "A-29149404",
+      "Moderate",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1",
+      "Jun 04, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/expat/+/a11ff32280a863bff93df13ad643912ad9bf1302"
+    ],
+    "group": "2016-11-05 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Expat"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2015-1283",
+      "A-27818751",
+      "Low",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1",
+      "Jul 24, 2015"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/expat/+/13b40c2040a17038b63a61e2b112c634da203d3b"
+    ],
+    "group": "2016-11-05 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Expat"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2016-6754",
+      "A-31217937",
+      "High",
+      "None*",
+      "5.0.2, 5.1.1, 6.0, 6.0.1",
+      "Aug 23, 2016"
+    ],
+    "links": [],
+    "group": "2016-11-05 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Webview"
+  },
+  {
+    "month": "2016-11",
+    "cells": [
+      "CVE-2014-9675",
+      "A-24296662 [2]",
+      "High",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1",
+      "Google internal"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/freetype/+/f720f0dbcf012d6c984dbbefa0875ef9840458c6",
+      "https://android.googlesource.com/platform/external/pdfium/+/96f965ff7411f1edba72140fd70740e63cabec71"
+    ],
+    "group": "2016-11-05 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Freetype"
+  },
+  {
+    "month": "2016-12",
+    "cells": [
+      "CVE-2016-6762",
+      "A-31251826 [2]",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Aug 28, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/core/+/1ee4892e66ba314131b7ecf17e98bb1762c4b84c",
+      "https://android.googlesource.com/platform/bionic/+/3656958a16590d07d1e25587734e000beb437740"
+    ],
+    "group": "2016-12-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in libziparchive"
+  },
+  {
+    "month": "2016-12",
+    "cells": [
+      "CVE-2016-6763",
+      "A-31530456",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Sep 12, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/services/Telephony/+/1294620627b1e9afdf4bd0ad51c25ed3daf80d84"
+    ],
+    "group": "2016-12-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Telephony"
+  },
+  {
+    "month": "2016-12",
+    "cells": [
+      "CVE-2016-6766",
+      "A-31318219",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Sep 5, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/0d13824315b0491d44e9c6eb5db06489ab0fcc20"
+    ],
+    "group": "2016-12-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Mediaserver"
+  },
+  {
+    "month": "2016-12",
+    "cells": [
+      "CVE-2016-6765",
+      "A-31449945",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 7.0",
+      "Sep 13, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/fd9cc97d4dfe2a2fbce2c0f1704d7a27ce7cbc44"
+    ],
+    "group": "2016-12-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Mediaserver"
+  },
+  {
+    "month": "2016-12",
+    "cells": [
+      "CVE-2016-6764",
+      "A-31681434",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Sep 22, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/0d13824315b0491d44e9c6eb5db06489ab0fcc20"
+    ],
+    "group": "2016-12-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Mediaserver"
+  },
+  {
+    "month": "2016-12",
+    "cells": [
+      "CVE-2016-6768",
+      "A-31631842",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Sep 19, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/ex/+/0ada9456d0270cb0e357a43d9187a6418d770760"
+    ],
+    "group": "2016-12-01 security patch level\u2014Vulnerability details",
+    "component": "Remote Code Execution vulnerability in Framesequence library"
+  },
+  {
+    "month": "2016-12",
+    "cells": [
+      "CVE-2016-6769",
+      "A-29055171",
+      "Moderate",
+      "None*",
+      "5.0.2, 5.1.1, 6.0, 6.0.1",
+      "May 27, 2016"
+    ],
+    "links": [],
+    "group": "2016-12-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Smart Lock"
+  },
+  {
+    "month": "2016-12",
+    "cells": [
+      "CVE-2016-6770",
+      "A-30202228",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Jul 16, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/2c61c57ac53cbb270b4e76b9d04465f8a3f6eadc"
+    ],
+    "group": "2016-12-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Framework APIs"
+  },
+  {
+    "month": "2016-12",
+    "cells": [
+      "CVE-2016-6772",
+      "A-31856351 [2]",
+      "Moderate",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Sep 30, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/opt/net/wifi/+/a5a18239096f6faee80f15f3fff39c3311898484",
+      "https://android.googlesource.com/platform/frameworks/opt/net/wifi/+/29a2baf3195256bab6a0a4a2d07b7f2efa46b614"
+    ],
+    "group": "2016-12-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Wi-Fi"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0382",
+      "A-32338390",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 21, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/ex/+/7f0e3dab5a892228d8dead7f0221cc9ae82474f7"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Framesequence"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0384",
+      "A-32095626",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 11, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/321ea5257e37c8edb26e66fe4ee78cca4cd915fe"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0385",
+      "A-32585400",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 11, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/hardware/qcom/audio/+/ed79f2cc961d7d35fdbbafdd235c1436bcd74358"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0386",
+      "A-32255299",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 18, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libnl/+/f0b40192efd1af977564ed6335d42a8bbdaf650a"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in libnl"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0387",
+      "A-32660278",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Nov 4, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/native/+/675e212c8c6653825cc3352c603caf2e40b00f9f"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0390",
+      "A-31647370",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Sep 19, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/tremolo/+/5dc99237d49e73c27d3eca54f6ccd97d13f94de0"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0392",
+      "A-32577290",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 29, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/453b351ac5bd2b6619925dc966da60adf6b3126c"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0393",
+      "A-30436808",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Google internal"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libvpx/+/6886e8e0a9db2dbad723dc37a548233e004b33bc"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0394",
+      "A-31752213",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Sep 23, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/services/Telephony/+/1cdced590675ce526c91c6f8983ceabb8038f58d"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Telephony"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0395",
+      "A-32219099",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 15, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/apps/ContactsCommon/+/d47661ad82d402c1e0c90eb83970687d784add1b"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Contacts"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0381",
+      "A-31607432",
+      "Moderate",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Sep 18, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libopus/+/0d052d64480a30e83fcdda80f4774624e044beb7"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0396",
+      "A-31781965",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Sep 27, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/557bd7bfe6c4895faee09e46fc9b5304a956c8b7"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0397",
+      "A-32377688",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 21, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/7a3246b870ddd11861eda2ab458b11d723c7f62c"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0398",
+      "A-32438594",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 25, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/26965db50a617f69bdefca0d7533796c80374f2c"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0398",
+      "A-32635664",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 25, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/26965db50a617f69bdefca0d7533796c80374f2c"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0398",
+      "A-32624850",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 25, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/26965db50a617f69bdefca0d7533796c80374f2c"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0399",
+      "A-32247948 [2]",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 18, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/c66c43ad571ed2590dcd55a762c73c90d9744bac",
+      "https://android.googlesource.com/platform/hardware/qcom/audio/+/d72ea85c78a1a68bf99fd5804ad9784b4102fe57"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0400",
+      "A-32584034 [2]",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 25, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/c66c43ad571ed2590dcd55a762c73c90d9744bac",
+      "https://android.googlesource.com/platform/hardware/qcom/audio/+/d72ea85c78a1a68bf99fd5804ad9784b4102fe57"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0401",
+      "A-32448258",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 26, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/321ea5257e37c8edb26e66fe4ee78cca4cd915fe"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0402",
+      "A-32436341 [2]",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 25, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/c66c43ad571ed2590dcd55a762c73c90d9744bac",
+      "https://android.googlesource.com/platform/hardware/qcom/audio/+/d72ea85c78a1a68bf99fd5804ad9784b4102fe57"
+    ],
+    "group": "2017-01-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0399",
+      "A-32588756 [2]",
+      "Moderate",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 18, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/c66c43ad571ed2590dcd55a762c73c90d9744bac",
+      "https://android.googlesource.com/platform/hardware/qcom/audio/+/d72ea85c78a1a68bf99fd5804ad9784b4102fe57"
+    ],
+    "group": "2017-01-05 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Qualcomm audio post processor"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0400",
+      "A-32438598 [2]",
+      "Moderate",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 25, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/c66c43ad571ed2590dcd55a762c73c90d9744bac",
+      "https://android.googlesource.com/platform/hardware/qcom/audio/+/d72ea85c78a1a68bf99fd5804ad9784b4102fe57"
+    ],
+    "group": "2017-01-05 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Qualcomm audio post processor"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0401",
+      "A-32588016",
+      "Moderate",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 26, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/hardware/qcom/audio/+/ed79f2cc961d7d35fdbbafdd235c1436bcd74358"
+    ],
+    "group": "2017-01-05 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Qualcomm audio post processor"
+  },
+  {
+    "month": "2017-01",
+    "cells": [
+      "CVE-2017-0402",
+      "A-32588352 [2]",
+      "Moderate",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 25, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/c66c43ad571ed2590dcd55a762c73c90d9744bac",
+      "https://android.googlesource.com/platform/hardware/qcom/audio/+/d72ea85c78a1a68bf99fd5804ad9784b4102fe57"
+    ],
+    "group": "2017-01-05 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Qualcomm audio post processor"
+  },
+  {
+    "month": "2017-02",
+    "cells": [
+      "CVE-2017-0410",
+      "A-31929765",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 2, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/native/+/b4d6b292bce7d82c93fd454078dedf5a1302b9fa"
+    ],
+    "group": "2017-02-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Framework APIs"
+  },
+  {
+    "month": "2017-02",
+    "cells": [
+      "CVE-2017-0416",
+      "A-32886609 [2]",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Google internal"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/b0bcddb44d992e74140a3f5eedc7177977ea8e34",
+      "https://android.googlesource.com/platform/frameworks/av/+/321ea5257e37c8edb26e66fe4ee78cca4cd915fe"
+    ],
+    "group": "2017-02-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-02",
+    "cells": [
+      "CVE-2017-0417",
+      "A-32705438",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Nov 7, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/b0bcddb44d992e74140a3f5eedc7177977ea8e34"
+    ],
+    "group": "2017-02-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-02",
+    "cells": [
+      "CVE-2017-0418",
+      "A-32703959 [2]",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Nov 7, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/b0bcddb44d992e74140a3f5eedc7177977ea8e34",
+      "https://android.googlesource.com/platform/hardware/libhardware/+/534098cb29e1e4151ba2ed83d6a911d0b6f48522"
+    ],
+    "group": "2017-02-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-02",
+    "cells": [
+      "CVE-2017-0419",
+      "A-32220769",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 15, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/a155de4d70e0b9ac8fc02b2bdcbb2e8e6cca46ff"
+    ],
+    "group": "2017-02-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-02",
+    "cells": [
+      "CVE-2017-0420",
+      "A-32615212",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Sep 12, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/apps/UnifiedEmail/+/2073799a165e6aa15117f8ad76bb0c7618b13909"
+    ],
+    "group": "2017-02-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in AOSP Mail"
+  },
+  {
+    "month": "2017-02",
+    "cells": [
+      "CVE-2017-0421",
+      "A-32555637",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Google internal"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/858064e946dc8dbf76bff9387e847e211703e336"
+    ],
+    "group": "2017-02-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Framework APIs"
+  },
+  {
+    "month": "2017-02",
+    "cells": [
+      "CVE-2017-0422",
+      "A-32322088",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 20, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/bionic/+/dba3df609436d7697305735818f0a840a49f1a0d"
+    ],
+    "group": "2017-02-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Bionic DNS"
+  },
+  {
+    "month": "2017-02",
+    "cells": [
+      "CVE-2017-0423",
+      "A-32612586",
+      "Moderate",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Nov 2, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/apps/Bluetooth/+/4c1f39e1cf203cb9db7b85e75b5fc32ec7132083"
+    ],
+    "group": "2017-02-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Bluetooth"
+  },
+  {
+    "month": "2017-02",
+    "cells": [
+      "CVE-2017-0425",
+      "A-32720785",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Nov 7, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/a155de4d70e0b9ac8fc02b2bdcbb2e8e6cca46ff"
+    ],
+    "group": "2017-02-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2016-2182",
+      "A-32096880",
+      "Critical",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Aug 5, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/boringssl/+/54bf62a81586d99d0a951ca3342d569b59e69b80"
+    ],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in OpenSSL & BoringSSL"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2017-0475",
+      "A-31914369",
+      "Critical",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 2, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/bootable/recovery/+/2c6c23f651abb3d215134dfba463eb72a5e9f8eb"
+    ],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in recovery verifier"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2017-0478",
+      "A-33718716",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Dec 16, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/ex/+/7c824f17b3eea976ca58be7ea097cb807126f73b"
+    ],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Framesequence library"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2017-0481",
+      "A-33434992",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Nov 6, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libnfc-nci/+/c67cc6ad2addddcb7185a33b08d27290ce54e350"
+    ],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in NFC"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2017-0479",
+      "A-32707507 [2]",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Nov 7, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/22e26d8ee73488c58ba3e7928e5da155151abfd0",
+      "https://android.googlesource.com/platform/frameworks/av/+/8415635765380be496da9b4578d8f134a527d86b"
+    ],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2017-0480",
+      "A-32705429 [2]",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Nov 7, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/22e26d8ee73488c58ba3e7928e5da155151abfd0",
+      "https://android.googlesource.com/platform/frameworks/av/+/8415635765380be496da9b4578d8f134a527d86b"
+    ],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2017-0483",
+      "A-33137046 [2]",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Nov 24, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/bc62c086e9ba7530723dc8874b83159f4d77d976",
+      "https://android.googlesource.com/platform/frameworks/av/+/5cabe32a59f9be1e913b6a07a23d4cfa55e3fb2f"
+    ],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2017-0489",
+      "A-33091107",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Nov 20, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/d22261fef84481651e12995062105239d551cbc6"
+    ],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Location Manager"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2017-0491",
+      "A-32553261",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Google internal"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/apps/PackageInstaller/+/5c49b6bf732c88481466dea341917b8604ce53fa"
+    ],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Package Manager"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2017-0496",
+      "A-31554152*",
+      "Moderate",
+      "None**",
+      "5.0.2, 5.1.1, 6.0, 6.0.1",
+      "Sep 14, 2016"
+    ],
+    "links": [],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Setup Wizard"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2017-0498",
+      "A-30352311 [2]",
+      "Moderate",
+      "All",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Google internal"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/1c4d535d0806dbeb6d2fa5cea0373cbd9ab6d33b",
+      "https://android.googlesource.com/platform/frameworks/base/+/5f621b5b1549e8379aee05807652d5111382ccc6"
+    ],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Setup Wizard"
+  },
+  {
+    "month": "2017-03",
+    "cells": [
+      "CVE-2017-0499",
+      "A-32095713",
+      "Low",
+      "All",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 11, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/22e26d8ee73488c58ba3e7928e5da155151abfd0"
+    ],
+    "group": "2017-03-01 security patch level\u2014Vulnerability details",
+    "component": "Denial of service vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2017-0539",
+      "A-33864300",
+      "Critical",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Dec 23, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/1ab5ce7e42feccd49e49752e6f58f9097ac5d254"
+    ],
+    "group": "2017-04-01 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2017-0541",
+      "A-34031018",
+      "Critical",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Jan 1, 2017"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/sonivox/+/56d153259cc3e16a6a0014199a2317dde333c978"
+    ],
+    "group": "2017-04-01 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2017-0544",
+      "A-31992879",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 6, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/4b49489c12e6862e9a320ebcb53872e809ed20ec"
+    ],
+    "group": "2017-04-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in CameraBase"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2017-0545",
+      "A-32591350",
+      "High",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 31, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/e5a54485e08400a976092cd5b1c6d909d0e1a4ab"
+    ],
+    "group": "2017-04-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2017-0546",
+      "A-32628763",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Nov 2, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/native/+/45b202513ba7440beaefbf9928f73fb6683dcfbd"
+    ],
+    "group": "2017-04-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in SurfaceFlinger"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2017-0547",
+      "A-33861560",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Dec 22, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/9667e3eff2d34c3797c3b529370de47b2c1f1bf6"
+    ],
+    "group": "2017-04-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2017-0553",
+      "A-32342065",
+      "Moderate",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Oct 21, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libnl/+/f83d9c1c67b6be69a96995e384f50b572b667df0"
+    ],
+    "group": "2017-04-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in libnl"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2017-0554",
+      "A-33815946 [2]",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Dec 20, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/services/Telephony/+/aeb795ef2290af1a0e4b14909363bc574e6b3ee7",
+      "https://android.googlesource.com/platform/frameworks/base/+/3294256ba5b9e2ba2d8619d617e3d900e5386564"
+    ],
+    "group": "2017-04-01 security patch level\u2014Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Telephony"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2017-0558",
+      "A-34056274",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Google internal"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/50358a80b1724f6cf1bcdf003e1abf9cc141b122"
+    ],
+    "group": "2017-04-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2017-0559",
+      "A-33897722",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Dec 25, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/skia/+/16882f721279a82a1c860ac689ce570b16fe26a0"
+    ],
+    "group": "2017-04-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in libskia"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2017-0560",
+      "A-30681079",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Google internal"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/efdec8f5688ce6b0a287eddb6d5dad93ffa0e1ee"
+    ],
+    "group": "2017-04-01 security patch level\u2014Vulnerability details",
+    "component": "Information disclosure vulnerability in Factory Reset"
+  },
+  {
+    "month": "2017-04",
+    "cells": [
+      "CVE-2016-10244",
+      "A-31470908",
+      "High",
+      "None*",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "Sep 13, 2016"
+    ],
+    "links": [],
+    "group": "2017-04-05 security patch level\u2014Vulnerability details",
+    "component": "Remote code execution vulnerability in Freetype"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0588",
+      "A-34618607",
+      "Critical",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "Jan 21, 2017"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/6f1d990ce0f116a205f467d9eb2082795e33872b"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Remote code execution vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0589",
+      "A-34897036",
+      "Critical",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "Feb 1, 2017"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/bcfc7124f6ef9f1ec128fb2e90de774a5b33d199"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Remote code execution vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0590",
+      "A-35039946",
+      "Critical",
+      "All",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "Feb 6, 2017"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/45c97f878bee15cd97262fe7f57ecea71990fed7"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Remote code execution vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0592",
+      "A-34970788",
+      "Critical",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "Google internal"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/acc192347665943ca674acf117e4f74a88436922"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Remote code execution vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0594",
+      "A-34617444",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "Jan 22, 2017"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/594bf934384920618d2b6ce0bcda1f60144cb3eb"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0595",
+      "A-34705519",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Jan 24, 2017"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/5443b57cc54f2e46b35246637be26a69e9f493e1"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0596",
+      "A-34749392",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1",
+      "Jan 24, 2017"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/5443b57cc54f2e46b35246637be26a69e9f493e1"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0597",
+      "A-34749571",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "Jan 25, 2017"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/a9188f89179a7edd301abaf37d644adf5d647a04"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Elevation of privilege vulnerability in Audioserver"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0598",
+      "A-34128677 [2]",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "Jan 6, 2017"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/4e110ab20bb91e945a17c6e166e14e2da9608f08",
+      "https://android.googlesource.com/platform/frameworks/base/+/d42e1204d5dddb78ec9d20d125951b59a8344f40"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Information disclosure vulnerability in Framework APIs"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0600",
+      "A-35269635",
+      "High",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "Feb 10, 2017"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/961e5ac5788b52304e64b9a509781beaf5201fb0"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Denial of service vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0602",
+      "A-34946955",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "Dec 5, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/a4875a49404c544134df37022ae587a4a3321647"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Information disclosure vulnerability in Bluetooth"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2016-7056",
+      "A-33752052",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "Dec 19, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/boringssl/+/13179a8e75fee98740b5ce728752aa7294b3e32d"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Information disclosure vulnerability in OpenSSL & BoringSSL"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2017-0603",
+      "A-35763994",
+      "Moderate",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "Feb 23, 2017"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/36b04932bb93cc3269279282686b439a17a89920"
+    ],
+    "group": "2017-05-01 security patch level-Vulnerability details",
+    "component": "Denial of service vulnerability in Mediaserver"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2015-7555",
+      "A-34697653",
+      "Critical",
+      "All",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2",
+      "April 13, 2016"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/giflib/+/dc07290edccc2c3fc4062da835306f809cea1fdc"
+    ],
+    "group": "2017-05-05 security patch level-Vulnerability details",
+    "component": "Remote code execution vulnerability in GIFLIB"
+  },
+  {
+    "month": "2017-05",
+    "cells": [
+      "CVE-2016-5131",
+      "A-32956747*",
+      "High",
+      "None**",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0",
+      "July 23, 2016"
+    ],
+    "links": [],
+    "group": "2017-05-05 security patch level-Vulnerability details",
+    "component": "Remote code execution vulnerability in libxml2"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-0646",
+      "A-33899337",
+      "ID",
+      "Moderate",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/2bcdf8ec7db12c5651c004601901f1fc25153f2c"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Bluetooth"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2015-8871",
+      "A-35443562*",
+      "RCE",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1"
+    ],
+    "links": [
+      "#asterisk"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2016-8332",
+      "A-37761553*",
+      "RCE",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1"
+    ],
+    "links": [
+      "#asterisk"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2016-5131",
+      "A-36554209",
+      "RCE",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libxml2/+/0eff71008becb7f2c2b4509708da4b79985948bb"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2016-4658",
+      "A-36554207",
+      "RCE",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libxml2/+/8ea80f29ea5fdf383ee3ae59ce35e55421a339f8"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-0663",
+      "A-37104170",
+      "RCE",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libxml2/+/521b88fbb6d18312923f0df653d045384b500ffc"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-7376",
+      "A-36555370",
+      "RCE",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libxml2/+/51e0cb2e5ec18eaf6fb331bc573ff27b743898f4"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-5056",
+      "A-36809819",
+      "RCE",
+      "Moderate",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libxml2/+/3f571b1bb85cf56903f06bab3a820182115c5541"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-7375",
+      "A-36556310",
+      "RCE",
+      "Moderate",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libxml2/+/308396a55280f69ad4112d4f9892f4cbeff042aa"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-0647",
+      "A-36392138",
+      "ID",
+      "Moderate",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/core/+/3d6a43155c702bce0e7e2a93a67247b5ce3946a5"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2016-1839",
+      "A-36553781",
+      "DoS",
+      "Moderate",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libxml2/+/ff20cd797822dba8569ee518c44e6864d6b4ebfa"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-0637",
+      "A-34064500",
+      "RCE",
+      "Critical",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/ebaa71da6362c497310377df509651974401d258"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-0391",
+      "A-32322258",
+      "DoS",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/14bc1678a80af5be7401cf750ab762ae8c75cc5a"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-0641",
+      "A-34360591",
+      "DoS",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libvpx/+/698796fc930baecf5c3fdebef17e73d5d9a58bcb"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-0642",
+      "A-34819017",
+      "DoS",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/913d9e8d93d6b81bb8eac3fc2c1426651f5b259d"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-0643",
+      "A-35645051*",
+      "DoS",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1"
+    ],
+    "links": [
+      "#asterisk"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-0644",
+      "A-35472997*",
+      "DoS",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1"
+    ],
+    "links": [
+      "#asterisk"
+    ],
+    "group": "2017-06-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-06",
+    "cells": [
+      "CVE-2017-0639",
+      "A-35310991",
+      "ID",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/apps/Bluetooth/+/f196061addcc56878078e5684f2029ddbf7055ff"
+    ],
+    "group": "Google device updates",
+    "component": "Qualcomm closed-source components"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-3544",
+      "A-35784677",
+      "RCE",
+      "Moderate",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/libcore/+/c5dd90d62590425f04a261e0f6c927acca147f88"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Runtime"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0664",
+      "A-36491278",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/59773dc2f213c3e645c7e04881afa0a8e6ffccca"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0665",
+      "A-36991414",
+      "EoP",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/native/+/75edf04bf18d37df28fb58e1d75331ed4bcae230"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0666",
+      "A-37285689",
+      "EoP",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/native/+/5fc2df253c089b53b3e235a3f237f96a98b53977"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0667",
+      "A-37478824",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/native/+/5ac63e4547feaa7cb51ac81896250f47f367ffba"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0668",
+      "A-22011579",
+      "ID",
+      "Moderate",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/providers/DownloadProvider/+/b3e3325d23289a94e66d8ce36a53a7ccf7b52c6d"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0670",
+      "A-36104177",
+      "DoS",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/bionic/+/e102faee8b2f87c28616e7f5453f9a11eea9b122"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2016-2109",
+      "A-35443725",
+      "DoS",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/boringssl/+/ccb2efe8d3fccb4321e85048d67c8528e03d4652"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0540",
+      "A-33966031",
+      "RCE",
+      "Critical",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/a92b39ff0c47d488b81fecd62ba85e48d386aa68"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0676",
+      "A-34896431",
+      "RCE",
+      "Critical",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/8e415eabb5d2abd2f2bd40a675339d967f81521b"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0681",
+      "A-37208566",
+      "RCE",
+      "Critical",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/tremolo/+/822af05a1364d8dc6189dce5380a2703214dd799"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0689",
+      "A-36215950",
+      "DoS",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/2210ff5600d3f965352a3074adff8fedddcf347e"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0690",
+      "A-36592202",
+      "DoS",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/1f418f10f4319fc829360b7efee7fca4b3880867"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0692",
+      "A-36725407",
+      "DoS",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/sonivox/+/6db482687caf12ea7d2d07d655b17413bc937c73"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0694",
+      "A-37093318",
+      "DoS",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/sonivox/+/47750a5f1b19695ac64d6f7aa6e7e0918d3c8977"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0695",
+      "A-37094889",
+      "DoS",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/cc5683451dd9be1491b54f215e9934d49f11cf70"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0697",
+      "A-37239013",
+      "DoS",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/c5eaf3ae70d5ea3a7d390294002e4cf9859b3578"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-07",
+    "cells": [
+      "CVE-2017-0703",
+      "A-33123882",
+      "EoP",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/apps/Settings/+/4af8f912aa1ee714638d0f9694d6f856bc8166f3"
+    ],
+    "group": "2017-07-01 security patch level\u2014Vulnerability details",
+    "component": "System UI"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0712",
+      "A-37207928",
+      "EoP",
+      "Moderate",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/opt/net/wifi/+/e8beda2579d277fb6b27f1792c4ed45c136ee15a"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0713",
+      "A-32096780 [2]",
+      "RCE",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/sfntly/+/a642e3543a4ffdaaf1456768968ae05a205ed4f4",
+      "https://android.googlesource.com/platform/external/sfntly/+/fa6053736808e999483ca0a21fbe16a3075cf2c8"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0714",
+      "A-36492637",
+      "RCE",
+      "Critical",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/26557d832fde349721500b47d51467c046794ae9"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0720",
+      "A-37430213",
+      "RCE",
+      "Critical",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/84732aaa4255955b8fefc39efee9b369181a6861"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0722",
+      "A-37660827",
+      "RCE",
+      "Critical",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/26557d832fde349721500b47d51467c046794ae9"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0745",
+      "A-37079296",
+      "RCE",
+      "Critical",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/b6ec3bbba36a3816a936f1e31984529b875b3618"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0726",
+      "A-36389123",
+      "DoS",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/8995285da14e1303ae7357bf8162cbec13e65b68"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0728",
+      "A-37469795",
+      "DoS",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/314a0d038e6ae24bef80fff0b542965aed78ae96"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0729",
+      "A-37710346",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/96974782cd914120272a026ebc263dd38098f392"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0731",
+      "A-36075363",
+      "EoP",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/c10183960909f074a265c134cd4087785e7d26bf"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0733",
+      "A-38391487",
+      "DoS",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/6f357fd589e115a74aae25b1ac325af6121cdadf"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0737",
+      "A-37563942",
+      "EoP",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/77e075ddd6d8cae33832add5225ee8f8c77908f0"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0805",
+      "A-37237701",
+      "EoP",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/77e075ddd6d8cae33832add5225ee8f8c77908f0"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0738",
+      "A-37563371 [2]",
+      "ID",
+      "Moderate",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/1d919d737b374b98b900c08c9d0c82fe250feb08",
+      "https://android.googlesource.com/platform/hardware/qcom/audio/+/234848dd6756c5d636f5a103e51636d60932983c"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-08",
+    "cells": [
+      "CVE-2017-0739",
+      "A-37712181",
+      "ID",
+      "Moderate",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/e6e353a231f746743866d360b88ef8ced367bcb1"
+    ],
+    "group": "2017-08-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0752",
+      "A-62196835 [2]",
+      "EoP",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/6ca2eccdbbd4f11698bd5312812b4d171ff3c8ce",
+      "https://android.googlesource.com/platform/packages/apps/Settings/+/fc65be941a4dbebfdbe53cd0bd6cc5cc1142a908"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-6983",
+      "A-63852675",
+      "RCE",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/sqlite/+/a1b4a910e8bf11e03479d91004652fc5919f475b"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0755",
+      "A-32178311",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/minikin/+/0dfb3527ba1ebbe97ad927e1f773427201aab501"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Libraries"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0756",
+      "A-34621073",
+      "RCE",
+      "Critical",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/9aa026d0b867b270149dd7323ce36f4f9bfea980"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0758",
+      "A-36492741",
+      "RCE",
+      "Critical",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/4a534a34b14944f3513b7c101fc74ab0ec9eac0d"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0762",
+      "A-62214264",
+      "RCE",
+      "Critical",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/50acbc692998474c598834c9453ca9675b8fb95b"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0763",
+      "A-62534693",
+      "RCE",
+      "Critical",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/0b57e70715c17e038b2fec0f808c1cd2172f4775"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0764",
+      "A-62872015",
+      "RCE",
+      "Critical",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/tremolo/+/dbf3d0fa7b89aa09ec7bf69699f6233c59070dbc"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0766",
+      "A-37776688",
+      "RCE",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/manifest/+/c0218b536c4243993bb666910d888cf16191dfd1"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0767",
+      "A-37536407 [2]",
+      "EoP",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/2410a6fa4286efc8c5b5a5f33f6eeb023bfb6abb",
+      "https://android.googlesource.com/platform/hardware/qcom/audio/+/045e30499e3c73fb05b0a97da2420fd27bb263a3"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0768",
+      "A-62019992",
+      "EoP",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/d8cc1fe9294accf05c6afcbe7821a485b9939af7"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0770",
+      "A-38234812",
+      "EoP",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/292d85545c6dec3c4386ec1fc2877597ea0ac5cc"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0773",
+      "A-37615911",
+      "DoS",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/9a03f9511559f82d034603e1df1425a4e0650f92"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0774",
+      "A-62673844 [2]",
+      "DoS",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/d4af2450c500c7d153fd66771b613f6e6882bf08",
+      "https://android.googlesource.com/platform/frameworks/av/+/5f56ec847a7f6250abd36a2f8a7b7baf4f966d11"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0775",
+      "A-62673179",
+      "DoS",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/a1d5b40aaaa050af40c0f95d8b2d3e1ae8cfebbf"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0779",
+      "A-38340117 [2]",
+      "ID",
+      "Moderate",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/ff4c8310ab7976ea9930b1dc4e3383720d5b5a8d",
+      "https://android.googlesource.com/platform/frameworks/av/+/b58464fa783c75ba9d304f670a4392df6fa98ed8"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "Media Framework"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0781",
+      "A-63146105 [2]",
+      "RCE",
+      "Critical",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/c513a8ff5cfdcc62cc14da354beb1dd22e56be0e",
+      "https://android.googlesource.com/platform/system/bt/+/1e0bb31f6a809b49014483dc118b9d9ad31ade68"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0782",
+      "A-63146237 [2] [3]",
+      "RCE",
+      "Critical",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/4e47f3db62bab524946c46efe04ed6a2b896b150",
+      "https://android.googlesource.com/platform/system/bt/+/1b08775917413f1674882130a948add1ae44cc91",
+      "https://android.googlesource.com/platform/system/bt/+/c568fa9088ded964e0ac99db236e612de5d82177"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0783",
+      "A-63145701",
+      "ID",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/1e77fefc8b9c832239e1b32c6a6880376065e24e"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0784",
+      "A-37287958",
+      "EoP",
+      "Moderate",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/apps/Nfc/+/e216bc208bc0f0f685d8271ef8a0b5da8fae1088"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-09",
+    "cells": [
+      "CVE-2017-0785",
+      "A-63146698",
+      "ID",
+      "Moderate",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/226ea26684d4cd609a5b456d3d2cc762453c2d75"
+    ],
+    "group": "2017-09-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-10",
+    "cells": [
+      "CVE-2017-0809",
+      "A-62673128",
+      "RCE",
+      "Critical",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/552a3b5df2a6876d10da20f72e4cc0d44ac2c790"
+    ],
+    "group": "2017-10-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-10",
+    "cells": [
+      "CVE-2017-0811",
+      "A-37930177",
+      "RCE",
+      "Critical",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/25c0ffbe6a181b4a373c3c9b421ea449d457e6ed"
+    ],
+    "group": "2017-10-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-10",
+    "cells": [
+      "CVE-2017-0815",
+      "A-63526567",
+      "ID",
+      "Moderate",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/f490fc335772a9b14e78997486f4a572b0594c04"
+    ],
+    "group": "2017-10-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-10",
+    "cells": [
+      "CVE-2017-0816",
+      "A-63662938",
+      "ID",
+      "Moderate",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/f490fc335772a9b14e78997486f4a572b0594c04"
+    ],
+    "group": "2017-10-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-10",
+    "cells": [
+      "CVE-2017-14496",
+      "A-64575136 [2]",
+      "RCE",
+      "High",
+      "4.4.4, 5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/dnsmasq/+/ff755ca73c98a1f2706fe86996e4bf6215054834",
+      "https://android.googlesource.com/platform/external/dnsmasq/+/68a974de72b5091ce608815a349daaeb05cdeab5"
+    ],
+    "group": "2017-10-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-0836",
+      "A-64893226",
+      "RCE",
+      "Critical",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/6921d875c1176cc79a582dd7416e020bf011b53e"
+    ],
+    "group": "2017-11-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-0839",
+      "A-64478003",
+      "ID",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/2bec2c3b1fd778b35f45ff4f8b385ff9208fe692"
+    ],
+    "group": "2017-11-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-0840",
+      "A-62948670",
+      "ID",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/f630233ee42214b36e6862dc99114f2c2bdda018"
+    ],
+    "group": "2017-11-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-0841",
+      "A-37723026",
+      "RCE",
+      "Critical",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/core/+/47efc676c849e3abf32001d66e2d6eb887e83c48"
+    ],
+    "group": "2017-11-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-13077",
+      "A-67737262",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "//android.googlesource.com/platform/external/wpa_supplicant_8/+/c66556ca2473620df9751e73eb97ec50a40ffd3e"
+    ],
+    "group": "2017-11-06 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-13078",
+      "A-67737262",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "//android.googlesource.com/platform/external/wpa_supplicant_8/+/10bfd644d0adaf334c036f8cda91a73984dbb7b9"
+    ],
+    "group": "2017-11-06 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-13079",
+      "A-67737262",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "//android.googlesource.com/platform/external/wpa_supplicant_8/+/10bfd644d0adaf334c036f8cda91a73984dbb7b9"
+    ],
+    "group": "2017-11-06 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-13080",
+      "A-67737262",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "//android.googlesource.com/platform/external/wpa_supplicant_8/+/10bfd644d0adaf334c036f8cda91a73984dbb7b9"
+    ],
+    "group": "2017-11-06 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-13081",
+      "A-67737262",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "//android.googlesource.com/platform/external/wpa_supplicant_8/+/10bfd644d0adaf334c036f8cda91a73984dbb7b9"
+    ],
+    "group": "2017-11-06 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-13086",
+      "A-67737262",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "//android.googlesource.com/platform/external/wpa_supplicant_8/+/c580b5560810c3348335b4b284a48773ceaa2301"
+    ],
+    "group": "2017-11-06 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-13087",
+      "A-67737262",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "//android.googlesource.com/platform/external/wpa_supplicant_8/+/58c0e963554ac0be5628f3d2e5058e5c686c128a"
+    ],
+    "group": "2017-11-06 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-11",
+    "cells": [
+      "CVE-2017-13088",
+      "A-67737262",
+      "EoP",
+      "High",
+      "5.0.2, 5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "//android.googlesource.com/platform/external/wpa_supplicant_8/+/58c0e963554ac0be5628f3d2e5058e5c686c128a"
+    ],
+    "group": "2017-11-06 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-12",
+    "cells": [
+      "CVE-2017-0807",
+      "A-35056974*",
+      "EoP",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2"
+    ],
+    "links": [
+      "#asterisk"
+    ],
+    "group": "2017-12-01 security patch level\u2014Vulnerability details",
+    "component": "Framework"
+  },
+  {
+    "month": "2017-12",
+    "cells": [
+      "CVE-2017-0870",
+      "A-62134807",
+      "EoP",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/minikin/+/22758c3312ada2cf9579c9c379875e3c7eb4b1f7"
+    ],
+    "group": "2017-12-01 security patch level\u2014Vulnerability details",
+    "component": "Framework"
+  },
+  {
+    "month": "2017-12",
+    "cells": [
+      "CVE-2017-0837",
+      "A-64340921 [2]",
+      "EoP",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/f759b8c4bcce2d3b3d45551be461f04297fa2bd3",
+      "https://android.googlesource.com/platform/frameworks/av/+/0957621867279da792808e43144f0c2b670d4c6c"
+    ],
+    "group": "2017-12-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2017-12",
+    "cells": [
+      "CVE-2017-13156",
+      "A-64211847",
+      "EoP",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/core/+/9dced1626219d47c75a9d37156ed7baeef8f6403"
+    ],
+    "group": "2017-12-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-12",
+    "cells": [
+      "CVE-2017-13157",
+      "A-32990341",
+      "ID",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/dba1bb07e04b51b1bd0a1251711781e731ce9524"
+    ],
+    "group": "2017-12-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-12",
+    "cells": [
+      "CVE-2017-13158",
+      "A-32879915",
+      "ID",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/dba1bb07e04b51b1bd0a1251711781e731ce9524"
+    ],
+    "group": "2017-12-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2017-12",
+    "cells": [
+      "CVE-2017-13159",
+      "A-32879772",
+      "ID",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/packages/apps/Settings/+/b5e93969a5e0c3a3f07e068dbc763cdd995a0e21"
+    ],
+    "group": "2017-12-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2018-01",
+    "cells": [
+      "CVE-2017-13176",
+      "A-68341964",
+      "EoP",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/base/+/4afa0352d6c1046f9e9b67fbf0011bcd751fcbb5"
+    ],
+    "group": "2018-01-01 security patch level\u2014Vulnerability details",
+    "component": "Android runtime"
+  },
+  {
+    "month": "2018-01",
+    "cells": [
+      "CVE-2017-13177",
+      "A-68320413",
+      "RCE",
+      "Critical",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/b686bb2df155fd1f55220d56f38cc0033afe278c"
+    ],
+    "group": "2018-01-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2018-01",
+    "cells": [
+      "CVE-2017-0855",
+      "A-64452857",
+      "DoS",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/d7d6df849cec9d0a9c1fd0d9957a1b8edef361b7"
+    ],
+    "group": "2018-01-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2018-01",
+    "cells": [
+      "CVE-2017-13191",
+      "A-64380403",
+      "DoS",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/f5b2fa243b4c45a4cd885e85f49ae548ab88c264"
+    ],
+    "group": "2018-01-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2018-01",
+    "cells": [
+      "CVE-2017-13192",
+      "A-64380202",
+      "DoS",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/52ca619511acbd542d843df1f92f858ce13048a5"
+    ],
+    "group": "2018-01-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2018-01",
+    "cells": [
+      "CVE-2017-13193",
+      "A-65718319",
+      "DoS",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/b3f31e493ef6fa886989198da9787807635eaae2"
+    ],
+    "group": "2018-01-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2018-01",
+    "cells": [
+      "CVE-2017-13195",
+      "A-65398821",
+      "DoS",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/066e3b1f9c954d95045bc9d33d2cdc9df419784f"
+    ],
+    "group": "2018-01-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2018-01",
+    "cells": [
+      "CVE-2017-13196",
+      "A-63522067",
+      "DoS",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/f5b2fa243b4c45a4cd885e85f49ae548ab88c264"
+    ],
+    "group": "2018-01-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2018-01",
+    "cells": [
+      "CVE-2017-13208",
+      "A-67474440",
+      "RCE",
+      "Critical",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/core/+/b71335264a7c3629f80b7bf1f87375c75c42d868"
+    ],
+    "group": "2018-01-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2018-01",
+    "cells": [
+      "CVE-2017-13210",
+      "A-67782345",
+      "EoP",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/media/+/e770e378dc8e2320679272234285456ca2244a62"
+    ],
+    "group": "2018-01-01 security patch level\u2014Vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2018-02",
+    "cells": [
+      "CVE-2017-13232",
+      "A-68953950",
+      "ID",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/frameworks/av/+/6a5d1fc7cbccd85054e56542a633149622effa67"
+    ],
+    "group": "2018-02-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2018-02",
+    "cells": [
+      "CVE-2017-13233",
+      "A-62851602",
+      "DoS",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/libhevc/+/a22314db4e0cfe11ef3e50dac6a13d52f7a595b3"
+    ],
+    "group": "2018-02-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2018-02",
+    "cells": [
+      "CVE-2017-13234",
+      "A-68159767",
+      "DoS",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/external/sonivox/+/33f45caed3b60bf81790e9b76cf82c8e8d6ed902"
+    ],
+    "group": "2018-02-01 security patch level\u2014Vulnerability details",
+    "component": "Media framework"
+  },
+  {
+    "month": "2018-03",
+    "cells": [
+      "CVE-2017-13255",
+      "A-68776054",
+      "RCE",
+      "Critical",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/f0edf6571d2d58e66ee0b100ebe49c585d31489f"
+    ],
+    "group": "2018-03-01 security patch level vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2018-03",
+    "cells": [
+      "CVE-2017-13256",
+      "A-68817966",
+      "RCE",
+      "Critical",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/f0edf6571d2d58e66ee0b100ebe49c585d31489f"
+    ],
+    "group": "2018-03-01 security patch level vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2018-03",
+    "cells": [
+      "CVE-2017-13266",
+      "A-69478941",
+      "RCE",
+      "Critical",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/2f2043f18463a5c963c138d24346870b1066e7a6"
+    ],
+    "group": "2018-03-01 security patch level vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2018-03",
+    "cells": [
+      "CVE-2017-13257",
+      "A-67110692",
+      "ID",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/08e68337a9eb45818d5a770570c8b1d15a14d904"
+    ],
+    "group": "2018-03-01 security patch level vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2018-03",
+    "cells": [
+      "CVE-2017-13258",
+      "A-67863755",
+      "ID",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/a50e70468c0a8d207e416e273d05a08635bdd45f"
+    ],
+    "group": "2018-03-01 security patch level vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2018-03",
+    "cells": [
+      "CVE-2017-13259",
+      "A-68161546 [2]",
+      "ID",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/0627e76edefd948dc3efe11564d7e53d56aac80c",
+      "https://android.googlesource.com/platform/system/bt/+/1313abd1761c39e8619a77964f8c42e3e72b5fee"
+    ],
+    "group": "2018-03-01 security patch level vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2018-03",
+    "cells": [
+      "CVE-2017-13260",
+      "A-69177251",
+      "ID",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/a50e70468c0a8d207e416e273d05a08635bdd45f"
+    ],
+    "group": "2018-03-01 security patch level vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2018-03",
+    "cells": [
+      "CVE-2017-13261",
+      "A-69177292",
+      "ID",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/a50e70468c0a8d207e416e273d05a08635bdd45f"
+    ],
+    "group": "2018-03-01 security patch level vulnerability details",
+    "component": "System"
+  },
+  {
+    "month": "2018-03",
+    "cells": [
+      "CVE-2017-13262",
+      "A-69271284",
+      "ID",
+      "High",
+      "5.1.1, 6.0, 6.0.1, 7.0, 7.1.1, 7.1.2, 8.0, 8.1"
+    ],
+    "links": [
+      "https://android.googlesource.com/platform/system/bt/+/a50e70468c0a8d207e416e273d05a08635bdd45f"
+    ],
+    "group": "2018-03-01 security patch level vulnerability details",
+    "component": "System"
+  }
+]
