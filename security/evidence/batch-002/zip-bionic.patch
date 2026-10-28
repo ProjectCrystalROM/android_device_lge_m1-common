@@ -1,0 +1,12 @@
+diff --git a/tests/Android.mk b/tests/Android.mk
+index 956b76f..d39f4d7 100644
+--- a/tests/Android.mk
++++ b/tests/Android.mk
+@@ -319,6 +319,7 @@
+ common_bionic-unit-tests_static_libraries_target := \
+     libbase \
+     libziparchive \
++    liblog \
+     libz \
+     libutils \
+ 

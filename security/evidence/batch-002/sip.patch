@@ -1,0 +1,79 @@
+diff --git a/src/com/android/phone/sip/SipEditor.java b/src/com/android/phone/sip/SipEditor.java
+index 8145c94..a0a9d3c 100644
+--- a/src/com/android/phone/sip/SipEditor.java
++++ b/src/com/android/phone/sip/SipEditor.java
+@@ -258,7 +258,13 @@
+         }
+     }
+ 
+-    private void deleteAndUnregisterProfile(SipProfile p) {
++    /**
++     * Deletes a {@link SipProfile} and un-registers the associated
++     * {@link android.telecom.PhoneAccount}.
++     *
++     * @param p The {@link SipProfile} to delete.
++     */
++    private void deleteAndUnregisterProfile(SipProfile p) throws IOException {
+         if (p == null) return;
+         mProfileDb.deleteProfile(p);
+         unregisterProfile(p.getUriString());
+diff --git a/src/com/android/phone/sip/SipProfileDb.java b/src/com/android/phone/sip/SipProfileDb.java
+index a51dfb9..bfb6f71 100644
+--- a/src/com/android/phone/sip/SipProfileDb.java
++++ b/src/com/android/phone/sip/SipProfileDb.java
+@@ -20,6 +20,7 @@
+ 
+ import android.content.Context;
+ import android.net.sip.SipProfile;
++import android.util.EventLog;
+ import android.util.Log;
+ 
+ import java.io.File;
+@@ -51,9 +52,13 @@
+         mSipSharedPreferences = new SipSharedPreferences(context);
+     }
+ 
+-    public void deleteProfile(SipProfile p) {
++    public void deleteProfile(SipProfile p) throws IOException {
+         synchronized(SipProfileDb.class) {
+-            deleteProfile(new File(mProfilesDirectory + p.getProfileName()));
++            File profileFile = new File(mProfilesDirectory, p.getProfileName());
++            if (!isChild(new File(mProfilesDirectory), profileFile)) {
++                throw new IOException("Invalid Profile Credentials!");
++            }
++            deleteProfile(profileFile);
+             if (mProfilesCount < 0) retrieveSipProfileListInternal();
+             mSipSharedPreferences.setProfilesCount(--mProfilesCount);
+         }
+@@ -69,7 +74,10 @@
+     public void saveProfile(SipProfile p) throws IOException {
+         synchronized(SipProfileDb.class) {
+             if (mProfilesCount < 0) retrieveSipProfileListInternal();
+-            File f = new File(mProfilesDirectory + p.getProfileName());
++            File f = new File(mProfilesDirectory, p.getProfileName());
++            if (!isChild(new File(mProfilesDirectory), f)) {
++                throw new IOException("Invalid Profile Credentials!");
++            }
+             if (!f.exists()) f.mkdirs();
+             AtomicFile atomicFile =
+                     new AtomicFile(new File(f, PROFILE_OBJ_FILE));
+@@ -141,4 +149,19 @@
+         }
+         return null;
+     }
++
++    /**
++     * Verifies that the file is a direct child of the base directory.
++     */
++    private boolean isChild(File base, File file) {
++        if (base == null || file == null) {
++            return false;
++        }
++        if (!base.equals(file.getAbsoluteFile().getParentFile())) {
++            Log.w(TAG, "isChild, file is not a child of the base dir.");
++            EventLog.writeEvent(0x534e4554, "31530456", -1, "");
++            return false;
++        }
++        return true;
++    }
+ }

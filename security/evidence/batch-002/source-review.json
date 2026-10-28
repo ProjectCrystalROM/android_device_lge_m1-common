@@ -1,0 +1,44 @@
+[
+  {
+    "id": "CVE-2016-6762",
+    "project": "system/core",
+    "commit": "5479772c09b945bef7ea75efce98c2be98f30258",
+    "file": "libziparchive/zip_archive.cc",
+    "sha256": "8ea95879ec5f4e82a14dbfb3980ffe9539717dc18581c2850be4dcfb7a22f664",
+    "matching_lines": [
+      {
+        "line": 79,
+        "text": "uint32_t cd_size;"
+      },
+      {
+        "line": 82,
+        "text": "uint32_t cd_start_offset;"
+      },
+      {
+        "line": 504,
+        "text": "if (eocd->cd_start_offset + eocd->cd_size > eocd_offset) {"
+      }
+    ],
+    "scope": "CM12.1 only",
+    "code_changes_applied": false
+  },
+  {
+    "id": "CVE-2016-6763",
+    "project": "packages/services/Telephony",
+    "commit": "608c8cdf1ae9ffa230f85c714240d9bb9da1df7d",
+    "file": "sip/src/com/android/services/telephony/sip/SipProfileDb.java",
+    "sha256": "e82ed8f23eeaad0ed603eecafe7f2d8d5ad9559ee6e4ddbb67a2d2d95379e1d7",
+    "matching_lines": [
+      {
+        "line": 56,
+        "text": "deleteProfile(new File(mProfilesDirectory + p.getProfileName()));"
+      },
+      {
+        "line": 72,
+        "text": "File f = new File(mProfilesDirectory + p.getProfileName());"
+      }
+    ],
+    "scope": "CM12.1 only",
+    "code_changes_applied": false
+  }
+]
